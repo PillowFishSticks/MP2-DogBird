@@ -55,6 +55,14 @@ function draw(){
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
 
         rocketpos[i].x--;
+
+        if(rocketpos[i].x==125){
+            rocketpos.push({
+                x : cvs.width,
+                y : Math.floor(Math.random()*rocketNorth.height)-
+                rocketNorth.height
+            });
+        }
     }
     
     ctx.drawImage(dog,dX,dY);
