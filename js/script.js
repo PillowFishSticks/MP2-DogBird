@@ -6,17 +6,19 @@ var ctx = cvs.getContext("2d");
 
 var dog = new Image();
 var bg = new Image();
+var fg = new Image();
 var rocketNorth = new Image();
 var rocketSouth = new Image();
 
 dog.src = "../images/dogrocket.png";
 bg.src = "../images/sbg.png";
+fg.src = "../images/fg.png";
 rocketNorth.src = "../images/rocketNorth.png";
 rocketSouth.src = "../images/rocketSouth.png";
 
 // gap variables
 
-var gap = 55;
+var gap = 100;
 var constant = rocketNorth.height+gap;
 
 // dog variables
@@ -64,6 +66,8 @@ function draw(){
             });
         }
     }
+
+    ctx.drawImage(fg,10,cvs.height - fg.height);
     
     ctx.drawImage(dog,dX,dY);
 
