@@ -18,7 +18,7 @@ rocketSouth.src = "../images/rocketSouth.png";
 
 // gap variables
 
-var gap = 100;
+var gap = 70;
 var constant = rocketNorth.height+gap;
 
 // dog variables
@@ -67,7 +67,7 @@ function draw(){
         }
     }
 
-    ctx.drawImage(fg,10,cvs.height - fg.height);
+    ctx.drawImage(fg,0,cvs.height - fg.height);
     
     ctx.drawImage(dog,dX,dY);
 
