@@ -24,6 +24,10 @@ var constant = rocketNorth.height+gap;
 var dX = 10;
 var dY = 150;
 
+// gravity variable
+
+var gravity = 1;
+
 // draw images
 
 function draw(){
@@ -32,6 +36,10 @@ function draw(){
     ctx.drawImage(rocketNorth,100,-30);
     ctx.drawImage(rocketSouth,100,0+constant);
     ctx.drawImage(dog,dX,dY);
+
+    dY += gravity;
+
+    requestAnimationFrame(draw);
 }
 
 draw();
