@@ -28,13 +28,35 @@ var dY = 150;
 
 var gravity = 1;
 
+// onkey down
+document.addEventListener("keydown", moveUp);
+
+function moveUp (){
+    dY -= 20;
+}
+
+// rocket placement
+
+var rocketpos = [];
+
+rocketpos[0] = {
+    x : cvs.width,
+    y : 0,
+}
+
 // draw images
 
 function draw(){
 
     ctx.drawImage(bg,0,0);
-    ctx.drawImage(rocketNorth,100,-30);
-    ctx.drawImage(rocketSouth,100,0+constant);
+
+    for(var i = 0; i < rocketpos.length; i++){
+        ctx.drawImage(rocketNorth,rocketpos[i].x,rocketpos[i].y);
+        ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
+
+        rocketpos[i].x--;
+    }
+    
     ctx.drawImage(dog,dX,dY);
 
     dY += gravity;
