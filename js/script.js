@@ -43,7 +43,7 @@ var rocketpos = [];
 
 rocketpos[0] = {
     x : cvs.width,
-    y : 0,
+    y : 10,
 }
 
 // draw images
