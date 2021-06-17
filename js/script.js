@@ -20,7 +20,7 @@ rocketSouth.src = "../images/rocketSouth.png";
 
 // gap variables
 
-var gap = 70;
+var gap = 90;
 var constant = rocketNorth.height+gap;
 
 // dog variables
@@ -36,7 +36,7 @@ var gravity = 1;
 document.addEventListener("keydown", moveUp);
 
 function moveUp (){
-    dY -= 20;
+    dY -= 25;
 }
 
 // rocket placement
