@@ -9,6 +9,7 @@ var bg = new Image();
 var fg = new Image();
 var rocketNorth = new Image();
 var rocketSouth = new Image();
+var score = 0
 
 dog.src = "../images/dogrocket.png";
 bg.src = "../images/sbg.png";
@@ -43,7 +44,7 @@ var rocketpos = [];
 
 rocketpos[0] = {
     x : cvs.width,
-    y : 10,
+    y : 0,
 }
 
 // draw images
@@ -65,6 +66,21 @@ function draw(){
                 rocketNorth.height
             });
         }
+
+        // collision
+
+        if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width 
+        && (dY <= rocketpos[i].y + rocketNorth.height || dY+dog.height >=
+        rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
+            location.reload();
+        }
+
+        // score 
+
+        if(rocketpos[i].x == 5){
+            score++;
+        }
+        
     }
 
     ctx.drawImage(fg,0,cvs.height - fg.height);
@@ -73,6 +89,10 @@ function draw(){
 
     dY += gravity;
 
+    ctx.fillSyle = "black";
+    ctx.font = "20px Verdana";
+    ctx.fillText("Score : "+score,10, 50);
+    
     requestAnimationFrame(draw);
 }
 
