@@ -1,6 +1,7 @@
+function init(){
+
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
-
 
 // Load images
 
@@ -72,7 +73,7 @@ function draw(){
         if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width 
         && (dY <= rocketpos[i].y + rocketNorth.height || dY+dog.height >=
         rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
-            location.reload();
+            location.return();
         }
 
         // score 
@@ -97,3 +98,4 @@ function draw(){
 }
 
 draw();
+}
