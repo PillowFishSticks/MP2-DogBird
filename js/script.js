@@ -73,7 +73,12 @@ function draw(){
         if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width 
         && (dY <= rocketpos[i].y + rocketNorth.height || dY+dog.height >=
         rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
-            location.return();
+        {
+        location.reload()
+        }
+        {
+        alert("Game Over, Your score is "+score);
+        }
         }
 
         // score 
