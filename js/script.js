@@ -20,8 +20,8 @@ rocketSouth.src = "../images/rocketSouth.png";
 
 // gap variables
 
-var gap = 90;
-var constant = rocketNorth.height+gap;
+var gap = 75;
+var constant = rocketNorth.height+100;
 
 // dog variables
 
@@ -74,12 +74,15 @@ function draw(){
         && (dY <= rocketpos[i].y + rocketNorth.height || dY+dog.height >=
         rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
         {
-        location.reload()
+        ctx.drawImage(bg,0,0);
+        ctx.font = "10px Arial";
+        ctx.fillText("Game Over, Your score is "+score, 10, 50);
         }
         {
-        alert("Game Over, Your score is "+score);
+        location.return()
         }
         }
+        
 
         // score 
 
