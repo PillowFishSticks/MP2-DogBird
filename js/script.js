@@ -10,6 +10,7 @@ var bg = new Image();
 var fg = new Image();
 var rocketNorth = new Image();
 var rocketSouth = new Image();
+var bone = new Image ();
 var score = 0
 
 dog.src = "../images/dogrocket.png";
@@ -17,6 +18,7 @@ bg.src = "../images/sbg.png";
 fg.src = "../images/fg.png";
 rocketNorth.src = "../images/rocketNorth.png";
 rocketSouth.src = "../images/rocketSouth.png";
+bone.src = "../images/bone.png";
 
 // gap variables
 
@@ -48,6 +50,12 @@ rocketpos[0] = {
     y : 0,
 }
 
+var randomNumber = Math.floor((Math.random() * 300) + 1);
+
+
+// bonepos
+
+
 // draw images
 
 function draw(){
@@ -57,6 +65,7 @@ function draw(){
     for(var i = 0; i < rocketpos.length; i++){
         ctx.drawImage(rocketNorth,rocketpos[i].x,rocketpos[i].y);
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
+        ctx.drawImage(bone,rocketpos[i].x - randomNumber,rocketpos[i].y + randomNumber);
 
         rocketpos[i].x--;
 
@@ -83,7 +92,6 @@ function draw(){
         }
         }
         
-
         // score 
 
         if(rocketpos[i].x == 5){
