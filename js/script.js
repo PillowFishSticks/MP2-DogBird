@@ -91,6 +91,13 @@ function draw(){
         location.return()
         }
         }
+
+        if (dX + dog.width >= rocketpos[i].x - randomNumber && dX <= rocketpos[i].x- randomNumber + bone.width 
+        && (dY <= rocketpos[i].y + randomNumber + bone.height)
+        ) 
+        {
+        score+=1;    
+        }
         
         // score 
 
