@@ -86,9 +86,6 @@ function draw(){
         ctx.drawImage(bg,0,0);
         ctx.font = "10px Arial";
         ctx.fillText("Game Over, Your score is "+score, 10, 50);
-        }
-        document.getElementById("highscore").textContent = "Your Highscore is "+score;  
-        {
         {
         var newScore = document.createElement("li");
         var newText = document.createTextNode("Your Highscore is "+score);
