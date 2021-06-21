@@ -22,6 +22,10 @@ h1 {
     font-size:30px;
 }
 
+.spacing {
+    margin-top: 30px;
+}
+
 /*--------------------------------------------accordion styling*/
 
 .accordion {
