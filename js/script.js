@@ -87,7 +87,7 @@ function draw(){
         ctx.font = "10px Arial";
         ctx.fillText("Game Over, Your score is "+score, 10, 50);
         {
-        var newScore = document.createElement("li");
+        var newScore = document.createElement("P");
         var newText = document.createTextNode("Your Highscore is "+score);
         newScore.appendChild(newText);
         document.getElementById("scorelist").appendChild(newScore);
