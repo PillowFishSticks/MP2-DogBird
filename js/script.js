@@ -15,7 +15,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-function init(){
+// canvas variables
 
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
@@ -36,6 +36,20 @@ fg.src = "../images/fg.png";
 rocketNorth.src = "../images/rocketNorth.png";
 rocketSouth.src = "../images/rocketSouth.png";
 bone.src = "../images/bone.png";
+
+// static image onload
+
+window.onload = function(){
+    ctx.drawImage(bg, 0, 0);
+    ctx.drawImage(rocketNorth, 200,-100);
+    ctx.drawImage(rocketSouth, 200,300);
+    ctx.drawImage(fg, 0, 400);
+    ctx.drawImage(dog, 10, 150);
+}
+
+// start game function
+
+function init(){
 
 // gap variables
 
@@ -68,9 +82,6 @@ rocketpos[0] = {
 }
 
 var randomNumber = Math.floor((Math.random() * 300) + 1);
-
-
-// bonepos
 
 
 // draw images
