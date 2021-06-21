@@ -16,11 +16,17 @@
     font-size: 20px;
 }
 
-/*--------------------------------------------main header styling*/
+/*--------------------------------------------header styling*/
 
 h1 {
     font-size:30px;
 }
+
+.headers {
+    color:#32CD32;
+}
+
+/*--------------------------------------------spacing between headers*/
 
 .spacing {
     margin-top: 30px;
