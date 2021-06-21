@@ -65,11 +65,20 @@ var dY = 150;
 
 var gravity = 1;
 
+// audio file
+
+var fly = new Audio();
+var gapscore = new Audio();
+
+fly.src ="../audio/fly.mp3";
+gapscore.src ="../audio/gapscore.mp3";
+
 // onkey down
 document.addEventListener("keydown", moveUp);
 
 function moveUp (){
     dY -= 25;
+    fly.play();
 }
 
 // rocket placement
@@ -135,6 +144,7 @@ function draw(){
 
         if(rocketpos[i].x == 5){
             score++;
+            gapscore.play();
         }
         
     }
