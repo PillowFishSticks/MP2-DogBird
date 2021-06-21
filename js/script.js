@@ -90,7 +90,7 @@ function draw(){
         document.getElementById("highscore").textContent = "Your Highscore is "+score;  
         {
         {
-        var newScore = document.createElement("P");
+        var newScore = document.createElement("li");
         var newText = document.createTextNode("Your Highscore is "+score);
         newScore.appendChild(newText);
         document.getElementById("scorelist").appendChild(newScore);
