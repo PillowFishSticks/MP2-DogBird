@@ -1,9 +1,13 @@
+/*--------------------------------------------Genral body styling*/
+
 * {
     background-color: black;
     font-family: 'Press Start 2P', cursive;
     color: white;
     text-align: center;
 }
+
+/*--------------------------------------------Gameplay button*/
 
 #btn {
     display: block;
@@ -12,13 +16,17 @@
     font-size: 20px;
 }
 
+/*--------------------------------------------main header styling*/
+
 h1 {
     font-size:30px;
 }
 
+/*--------------------------------------------accordion styling*/
+
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: #FF1493;
+  color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -30,7 +38,7 @@ h1 {
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #FF00FF;
 }
 
 .accordion:after {
