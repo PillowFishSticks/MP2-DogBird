@@ -69,9 +69,12 @@ var gravity = 1;
 
 var fly = new Audio();
 var gapscore = new Audio();
+var death = new Audio();
 
 fly.src ="../audio/bark.mp3";
 gapscore.src ="../audio/gapscore.mp3";
+death.src ="../audio/death.mp3";
+
 
 // onkey down
 document.addEventListener("keydown", moveUp);
@@ -119,6 +122,9 @@ function draw(){
         if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width 
         && (dY <= rocketpos[i].y + rocketNorth.height || dY+dog.height >=
         rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
+        {
+        death.play();
+        }
         {
         ctx.drawImage(bg,0,0);
         ctx.font = "20px serif";
