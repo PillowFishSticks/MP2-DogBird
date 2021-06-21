@@ -22,7 +22,7 @@ bone.src = "../images/bone.png";
 
 // gap variables
 
-var gap = 150;
+var gap = 160;
 var constant = rocketNorth.height+gap;
 
 // dog variables
