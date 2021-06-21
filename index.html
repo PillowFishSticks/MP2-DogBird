@@ -8,15 +8,28 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 <title>DOGBIRD</title>
 </head>
 <body>
-    <div id="scorelist"></div>
-    <h3>Dogbird</h3>
-    <input type="button" value="Start" onclick="init()" id="btn"/>
-    <p id="highscore"></p>
-    
-    <canvas id="canvas" width="288" height="512"></canvas>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="scorelist"></div>
+            </div>
+            <div class="col-md-3">
+                <h3>Dogbird</h3>
+                <input type="button" value="Start" onclick="init()" id="btn"/>
+                <p id="highscore"></p>
+                <canvas id="canvas" width="288" height="512"></canvas>
+            </div>
+            <div class="col-md-3">
+                
+            </div> 
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
