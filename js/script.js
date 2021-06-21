@@ -70,7 +70,7 @@ var gravity = 1;
 var fly = new Audio();
 var gapscore = new Audio();
 
-fly.src ="../audio/fly.mp3";
+fly.src ="../audio/bark.mp3";
 gapscore.src ="../audio/gapscore.mp3";
 
 // onkey down
