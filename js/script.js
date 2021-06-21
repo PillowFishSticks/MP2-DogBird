@@ -101,11 +101,11 @@ function draw(){
         rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
         {
         ctx.drawImage(bg,0,0);
-        ctx.font = "10px Arial";
-        ctx.fillText("Game Over, Your score is "+score, 10, 50);
+        ctx.font = "20px serif";
+        ctx.strokeText("Game over, your score is "+score, 30, 100);
         {
         var newScore = document.createElement("P");
-        var newText = document.createTextNode("Your Highscore is "+score);
+        var newText = document.createTextNode("Score to beat is "+score);
         newScore.appendChild(newText);
         document.getElementById("scorelist").appendChild(newScore);
         }
