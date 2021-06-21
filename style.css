@@ -4,3 +4,10 @@
     color: white;
     text-align: center;
 }
+
+#btn {
+    display: block;
+    margin-top: 20px;
+    margin-left: 150px;
+    font-size: 20px;
+}
