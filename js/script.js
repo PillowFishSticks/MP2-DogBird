@@ -89,6 +89,11 @@ function draw(){
         }
         document.getElementById("highscore").textContent = "Your Highscore is "+score;  
         {
+        {
+        var highscorelist = document.createElement("p");   
+        highscorelist.innerHTML = "highscore "+score;                   
+        document.body.appendChild(highscorelist);
+        }
         location.return()
         }
         }
