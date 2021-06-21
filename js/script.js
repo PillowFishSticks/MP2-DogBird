@@ -23,7 +23,7 @@ bone.src = "../images/bone.png";
 // gap variables
 
 var gap = 75;
-var constant = rocketNorth.height+150;
+var constant = rocketNorth.height+160;
 
 // dog variables
 
@@ -87,7 +87,7 @@ function draw(){
         ctx.font = "10px Arial";
         ctx.fillText("Game Over, Your score is "+score, 10, 50);
         }
-        document.getElementById("highscore").textContent = "Your Highscore is "+score;
+        document.getElementById("highscore").textContent = "Your Highscore is "+score;  
         {
         location.return()
         }
