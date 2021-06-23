@@ -76,4 +76,23 @@ h1 {
     background-color: black;
 }
 
+/** Medium devices only **/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #btn {
+    margin-left: 100px;
+ 
+}
+
+/** Small devices only **/
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+/** Extra small devices only **/
+
+@media (min-width: 375px) and (max-width: 667px) {
+}
+
 
