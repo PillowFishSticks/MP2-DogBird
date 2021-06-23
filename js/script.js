@@ -77,7 +77,7 @@ death.src ="../audio/death.mp3";
 
 
 // onkey down
-document.addEventListener("keydown", moveUp);
+document.addEventListener("click", moveUp);
 
 function moveUp (){
     dY -= 25;
