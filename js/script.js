@@ -28,7 +28,6 @@ var fg = new Image();
 var rocketNorth = new Image();
 var rocketSouth = new Image();
 var bone = new Image ();
-var score = 0
 
 dog.src = "../images/dogrocket.png";
 bg.src = "../images/sbg.png";
@@ -50,6 +49,10 @@ window.onload = function(){
 // start game function
 
 function init(){
+
+// score
+
+var score = 0
 
 // gap variables
 
