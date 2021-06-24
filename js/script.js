@@ -149,6 +149,7 @@ function draw(){
         score+=1;    
         }
         
+        
         // score 
 
         if(rocketpos[i].x == 5){
