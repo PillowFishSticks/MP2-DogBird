@@ -1,7 +1,6 @@
-[Dogbird]() was designed, built, and deployed, by myself, Mark Percy as the second project for the Code Institute Full Stack Web Development diploma. The purpose of The Bookshelf is to be an online book club 
-that allows members to view The Bookshelf’s monthly recommendations, as well as provide and share book recommendations of the users 
-own liking. The website is designed to share literary experiences, specifically for those looking for book suggestions and wanting to 
-share their own books that they have read and enjoyed. 
+[Dogbird]() was designed, built, and deployed, by myself, Mark Percy as the second project for the Code Institute Full Stack Web 
+Development diploma. Is it a dog? Is it a bird? No, its Dogbird! A game of skill, luck, and chance. You need to dodge pipes, catch 
+treats and fly like your life depends on it. Best of luck!
 
 ## Table of Contents
 1. [UX](#ux)
