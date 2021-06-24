@@ -80,7 +80,24 @@ h1 {
 
 @media (min-width: 992px) and (max-width: 1199px) {
 #btn {
+    margin-left: 440px;
+}
+
+.logo {
+    margin-top: 30px;
+}
+
+.playarea {
+    margin-top: 30px;
+}
+
+.spacing {
     margin-left: 100px;
+    width: 800px;
+}
+
+.highscorearea{
+    margin-top: 40px;
 }
 }
 
