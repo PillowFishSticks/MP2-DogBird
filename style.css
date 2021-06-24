@@ -74,6 +74,8 @@ h1 {
 
 .background {
     background-color: black;
+    margin-top: 10px;
+    font-family: 'Anton', sans-serif;
 }
 
 /** Medium devices only **/
