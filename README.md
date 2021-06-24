@@ -306,35 +306,20 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 ## Features for Future Releases
 
-1. **Being able to upvote books**
-    - Having a star rating available in a book's modal for users to vote for. 
-    - The star rating is displayed in each book's modal, giving the user an idea of how other members felt about the book. 
+1. **Add powerups**
+    - 
 
-2. **Users being able to add reviews to The Bookshelf's picks and members books**
+2. **Add different difficulty levels**
     - Having an option for users to write a reviews on books added by The Bookshelf and its members. 
-    - The option would be available on each of the book's modals next to the done, edit, and delete buttons. 
-    - The reviews would appear under the orginal review added. 
 
-# Information Arcitecture
+3. **Add user functionality**
+    - Having an option for users to write a reviews on books added by The Bookshelf and its members. 
 
-### Database Choice
-- According to project instructions, the document-based database MongoDB is used. 
+4. **Character choice**
+    - Users have the choice of different characters to play with. 
+    - When starting a new game, users  
 
-- The database 'theBookshelf' has two collections 'users' and 'your_picks'.
 
-**users**
-
-![users](/static/images/db-users.png)
-
-- **users** contains information about the user, including a unique id, their username, and a hashed password. 
-    
-**your_picks**
-
-![your_picks](/static/images/db-your-picks.png)
-
-- **your_picks** contains information about the books added to the 'Your picks' page. 
-- This includes the book's title, author, a link to the book cover, a link to the Amazon store, a synopsis, a review written by
-  the user, and who the added book was created by. 
 
 # Technologies Used
 
