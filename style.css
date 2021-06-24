@@ -108,13 +108,37 @@ h1 {
     margin-top: 40px;
 }
 
-
 }
 
 
 /** Extra small devices only **/
 
 @media (min-width: 375px) and (max-width: 667px) {
+
+#btn {
+    margin-left: 110px;
 }
+
+.logo {
+    margin-top: 30px;
+}
+
+.playarea {
+    margin-top: 30px;
+    margin-left: 8px;
+}
+
+.spacing {
+    margin-left: 25px;
+    width: 300px;
+}
+
+.highscorearea{
+    margin-top: 40px;
+}
+
+}
+ 
+
 
 
