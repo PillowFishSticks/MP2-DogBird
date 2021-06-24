@@ -1,5 +1,4 @@
-[The Bookshelf](https://the-bookshelf-milestone.herokuapp.com/) was designed, built, and deployed, by myself, Michelle Newell as the 
-third project for the Code Institute Full Stack Web Development diploma. The purpose of The Bookshelf is to be an online book club 
+[Dogbird]() was designed, built, and deployed, by myself, Mark Percy as the second project for the Code Institute Full Stack Web Development diploma. The purpose of The Bookshelf is to be an online book club 
 that allows members to view The Bookshelf’s monthly recommendations, as well as provide and share book recommendations of the users 
 own liking. The website is designed to share literary experiences, specifically for those looking for book suggestions and wanting to 
 share their own books that they have read and enjoyed. 
@@ -15,34 +14,22 @@ share their own books that they have read and enjoyed.
 
 2. [Features](#features)
     - [Existing Features](#existing-features)
-        - [Elements on every page](#elements-on-every-page)
-        - [Who we are](#who-we-are)
-	    - [Login](#log-in)
-	    - [Register](#register)
-        - [Club picks](#club-picks)
-        - [Your picks](#your-picks)
-        - [Add book](#add-book)
-        - [Edit book](#edit-book)
-   	    - [Log out](#log-out)
     - [Features for Future Releases](#features-for-future-releases)
 
-3. [Information Arcitecture](#information-architecture)
-	- [Database choice](#database-choice)
-
-4. [Technologies Used](#technologies-used)
+3. [Technologies Used](#technologies-used)
     - [Tools](#tools)
     - [Databases](#databases)
     - [Libraries](#libraries)
     - [Languages](#languages)
 
-5. [Testing](#testing)
+4. [Testing](#testing)
     - See seperate [TESTING.md](TESTING.md) file.
 
-6. [Deployment](#deployment)
+5. [Deployment](#deployment)
     - [How to run this project locally](#how-to-run-this-project-locally)
     - [Heroku Deployment](#heroku-deployment)
  
-7. [Credits](#credits)
+6. [Credits](#credits)
     - [Content](#content)
     - [Images](#images)
     - [Code](#code)
@@ -376,126 +363,26 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 # Deployment
 
-## How to run this project locally
+## GitHub Deployment
 
-To run this project on your own IDE follow the instructions below:
+This project is hosted in GitHub pages
 
-Ensure you have the following tools: 
-    - An IDE such as [Visual Studio Code](https://code.visualstudio.com/)
+1. On the menu on the top of the project's repository on GitHub select **Settings.** 
+2. Scroll down to the GitHub **Pages** section. 
+3. Inside that section, click on the drop down menu under **Source** and select **Master Branch**. 
+4. The page refreshes auttomatically and the website is now deployed. 
+5. The link to the webpage is in the GitHub **Pages** section down below. 
 
-The following **must be installed** on your machine:
-    - [PIP](https://pip.pypa.io/en/stable/installing/)
-    - [Python 3](https://www.python.org/downloads/)
-    - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+## To run the project locally 
 
-### Instructions
-1. Save a copy of the github repository located at https://github.com/MAN95-dev/the-bookshelf by clicking the "download zip" button at 
-   the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the 
-   repository with the following command.
-    ```
-    git clone https://github.com/MAN95-dev/the-bookshelf
-    ```
+To clone this project from GitHub
 
-2. Open your preferred IDE, open a terminal session in the unzip folder or cd to the correct location.
-
-3. A virtual environment is recommended for the Python interpreter, I recommend using Pythons built in virtual environment. Enter the command:
-    ```
-    python -m .venv venv
-    ```  
-_NOTE: The `python` part of this command and the ones in other steps below assumes you are working with a windows operating system. 
-Your Python command may differ, such as `python3` or `py`_
-
-4. Activate the .venv with the command:
-    ```
-    .venv\Scripts\activate 
-    ```
-_Again this **command may differ depending on your operating system**, please check the [Python Documentation on virtual environments](
-    https://docs.python.org/3/library/venv.html) for further instructions._
-
-5. If needed, Upgrade pip locally with
-    ```
-    pip install --upgrade pip.
-    ```
-
-6. Install all required modules with the command 
-    ```
-    pip -r requirements.txt.
-    ```
-
-7. Set up the following environment variables within your IDE. 
-
-    - If using VSCode, locate the `settings.json` file within the .vscode directory and add your environment variables as below. 
-      Do not forget to restart your machine to activate your environment variables or your code will not be able to see them: 
-
-    ```json
-    "terminal.integrated.env.windows": {
-        "HOSTNAME": "<enter hostname here>",
-        "DEV": "1",
-        "IP": "<your IP>",
-        "MONGO_DBNAME": "<your database name on MongoDB>",
-        "MONGO_URI": "<your URI to your MongoDB database>",
-        "PORT": "<your port>",
-        "SECRET_KEY": "<your secret key>" 
-    }
-    ```
-
-    - If using an IDE that includes a `bashrc` file, open this file and enter all the environment variables listed above using the 
-      following format: 
-    ```
-    HOSTNAME="<enter key here>"
-    ```
-    - `HOSTNAME` should be the local address for the site when running within your own IDE.
-    - `DEV` environment variable is set only within the development environment, it does not exist in the deployed version, making it 
-      possible to have different settings for the two environments. For example setting DEBUG to True only when working in development 
-      and not on the deployed site.
-
-8. If you have restarted your machine to activate your environment variables, do not forget to reactivate your virtual environment with 
-   the command used at step 4.
-
-9. Migrate the admin panel models to create your database template with the terminal command
-    ```
-    python manage.py migrate
-    ```
-
-10. You can now run the program locally with the following command: 
-    ```
-    python manage.py runserver
-    ```
-
-## Heroku Deployment
-
-To deploy The Bookshelf website to heroku, take the following steps:
-
-1. Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`.
-
-2. Create a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
-
-3. `git add` and `git commit` the new requirements and Procfile and then `git push` the project to GitHub.
-
-4. Create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the "New" button in your dashboard. 
-   Give it a name and set the region to whichever is applicable for your location.
-
-5. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
-
-6. Confirm the linking of the heroku app to the correct GitHub repository.
-
-7. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
-
-8. Set the following config vars:
-
-| Key | Value |
---- | ---
-IP | `<your IP>`
-MONGO_DBNAME | `<your database name on MongoDB>`
-MONGO_URI | `<your URI to your MongoDB database>`
-PORT | `<your port>`
-SECRET_KEY | `<your secret key>`
-
-9. In your heroku dashboard, click "Deploy". Scroll down to "Manual Deploy", select the master branch then click "Deploy Branch".
-
-10. Once the build is complete, click the "View app" button provided.
-
-12. Your heroku site should run as expected.
+1. Under the repository's name, click **Clone or download**. 
+2. In the **Clone with HTTPs** section, copy the given URL. 
+3. In your IDE of choice, open **Git Bash**. 
+4. Change the current working directory to the location where you want the cloned directory to be made. 
+5. Type **git clone**, and then paste the URL copied from GitHub.
+6. Press **enter** and the clone will be created. 
 
 # Credits
 
@@ -524,5 +411,5 @@ SECRET_KEY | `<your secret key>`
 
 ## Acknowledgements
 
- - Special thanks to my mentor Moosa, for his time, and guidance with this project. 
+ - Special thanks to my mentor Precious, for his time, and guidance with this project. 
  - Code Institute tutors for helping support and guide me in the right direction with my code.
