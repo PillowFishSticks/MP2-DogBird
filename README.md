@@ -343,19 +343,14 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - [GitHub](https://github.com/) to store and share all project code remotely. 
 - [Gitpod](https://www.gitpod.io/) - IDE (Integrated Development Environment) used to write the code.
 - [Balsamiq](https://balsamiq.com/) to create the wireframes for this project.
-- [Heroku](https://id.heroku.com/) - Container-based cloud platform for deployment and running of apps.
-
-### Databases
-- [MongoDB](https://www.postgresql.org/) a NoSQL database program, using JSON-like documents. 
 
 ### Libraries
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
 - [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive easily.
-- [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) to provide icons for The House of Mouse webshop.
 - [Google Fonts](https://fonts.google.com/) to style the website fonts.
 
 ### Languages
-- This project uses HTML, CSS, JavaScript and Python programming languages.
+- This project uses HTML, CSS, and JavaScript programming languages.
 
 # Testing 
  
