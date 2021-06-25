@@ -107,7 +107,8 @@ The following design choices were made bearing this in mind:
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the design and planning process for this project. 
 
-- [Wireframes](/static/images/wireframes/wireframe-who-we-are.png)
+- [Wireframe for desktop](/images/wireframes/wireframe1.png)
+- [Wireframe for tablet and mobile](/images/wireframes/wireframe2.png)
 
 # Features
  
