@@ -79,54 +79,35 @@ As a visitor to the Dogbird game I expect/want/need:
 
 7. To be able to see my highscores after each of my games. 
 
-8. For the game to have power ups that boost my score. 
+8. For the game to have power ups that boost my score.
 
 ## Design Choices
 
-The Bookshelf has a fun feel to it, with emphasis on displaying books in an easy to read manner. The following design choices were 
-made bearing this in mind:
+Dogbird has a fun feel to it, displaying the game information in a quirky and easy to read manner, with the game easily accessable. 
+The following design choices were made bearing this in mind:
 
 ### Fonts
-- The primary font 'Roboto' was chosen to be the main text of this site as it is easy to read, looks professional, and goes well 
-  with the secondary font. 
+- The primary font 'Press Start 2P' was chosen to be the main text of this site as it mimics an arcade gaming font, giving that retro
+  arcade feel to it. 
 
-- The secondary font 'Rocknroll One' was chosen for the headings as it looks fun, and is easy to read. 
-
-### Icons
-- Very few icons were used, as to avoid overcrowding. 
-- The following icons were used in [Add book](https://the-bookshelf-milestone.herokuapp.com/add_book) page to emphasize each sections purpose:        
-   - The **book** icon was placed next to 'Title'. 
-   - The **user** icon was placed next to 'Author'.
-   - The **file image** icon was placed next to 'Image URL'. 
-   - The **credit card** icon was placed next to 'Amazon store URL'. 
-   - The **comment** icon was placed next to 'Synopsis'. 
-   - The **pencil** icon was placed next to 'Your review'. 
-- The **Facebook logo** icon, **Instagram logo** icon, **Twitter logo** icon, are included in the footer to lead visitors to The 
-  Bookshelf's social media accounts.
+- The secondary font 'Anton' was chosen for the body of the accordian as it was a suggested pairing on Google fonts. 
 
 ### Colours
-- Yellow: #ffff66
-- Orange: #ffcc99
-- Light blue: #87cefa
-- Light grey: #87cefa
+- Black: #000000
+- White: #FFFFFF
+- Bright pink: #FF1493
+- Bright green: #32CD32
+- Bright purple: #FF00FF
 
-- The bright orange and yellow were chosen for the navbar and footer as they provide a fun, happy feel to the website. No other bright 
-  colours were used as the book covers provide an array of different colours. The light gray was chosen for the 'Donate Books' section
-  as it goes well with the bright colours, but provides a subtle colour to a page filled with bright colours. The light blue was chosen
-  to highlight monthly and user picks in the modals. 
+- Black was chosen to be the background color so that bright colors could be used in the foreground. White was chosen for the text as
+  it is easy to read. Bright green was chosen for the sub-headings and start button as it is bright and fun and reminds one of an 
+  arcade game. The bright pink is used for the accordian as it ties in with the other colors used. 
 
 ## Wireframes
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the design and planning process for this project. 
 
-- [Who we are](/static/images/wireframes/wireframe-who-we-are.png)
-- [Log in](/static/images/wireframes/wireframe-log-in.png)
-- [Register](/static/images/wireframes/wireframe-register.png)
-- [Club picks](/static/images/wireframes/wireframe-club-picks.png)
-- [Club picks modal](/static/images/wireframes/wireframe-club-picks-modal.png)
-- [Your picks](/static/images/wireframes/wireframe-your-picks.png)
-- [Your picks modal](/static/images/wireframes/wireframe-your-picks-modal.png)
-- [Add book](/static/images/wireframes/wireframe-add-book.png)
+- [Wireframes](/static/images/wireframes/wireframe-who-we-are.png)
 
 # Features
  
@@ -304,8 +285,6 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 4. **Character choice**
     - Users have the choice of different characters to play with. 
     - When starting a new game, users  
-
-
 
 # Technologies Used
 
