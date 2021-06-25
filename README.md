@@ -47,21 +47,22 @@ The target audience for Dogbird are:
 - People who are interested in playing games online. 
 
 User goals are:
-- To play a fun game. 
+- To play a fun game with sound effects. 
 - Information about the game and how to play it. 
-- Too have information on game controls. 
+- To have information on game controls.
+- To be be able to see my highscores whilst playing.  
 
-### The Bookshelf’s Goals
+### The Dogbird's Goals
 
-The goals of The Bookshelf are:
-- Provide a platform where users can find book recommendations via the book club and its members. 
-- For book club members to be able to add, edit, and delete books that they would like to share. 
-- Provide a platform for book club members to share reviews about the books they would like to add. 
-- For book club members to be able to view books in detail, including a purchase link. 
+The goals of Dogbird are:
+- To provide a platform for users to be able to play a fun game. 
+- Provide information about the game and how to play it. 
+- Provide information on the controls used to play the game. 
+- Ensure users are able to see their highscores whilst playing the game. 
 
 ## User Stories
 
-As a visitor to The Bookshelf website I expect/want/need:
+As a visitor to the Dogbird game I expect/want/need:
 
 1. To be able to easily find the information I am looking for, the layout needs to make sense so that I am not put off. 
 
@@ -70,23 +71,15 @@ As a visitor to The Bookshelf website I expect/want/need:
 3. The site to be responsive and navigable for various device sizes; desktop, tablet, and phone. For the content to look good 
    on all of the devices.
 
-4. To learn more about The Bookshelf. 
+4. To learn more about Dogbird. 
 
-5. To be able to connect to The Bookshelf’s social media accounts. 
+5. To learn how to play the game and the controls needed to do so. 
 
-6. To be able to click on books for further information about them. 
+6. To have information on the rules of the game. 
 
-7. A purchase link to be provided for each book, in the event that I would like to buy it. 
+7. To be able to see my highscores after each of my games. 
 
-8. To be able to add, edit, and delete books that I would like to share with others. 
-
-9. To be able to write reviews about the books I would like to share. 
-
-10. To be able to log in and out with ease. 
-
-11. To be notified that I have logged in or out of my account. 
-
-12. To be notified about changes that are made, inlcluding adding, editing, and deleting books. 
+8. For the game to have power ups that boost my score. 
 
 ## Design Choices
 
