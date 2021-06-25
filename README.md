@@ -42,20 +42,14 @@ treats and fly like your life depends on it. Best of luck!
 
 ### Visitor Goals
 
-The target audience for The Bookshelf are:
-- People who enjoy reading. 
-- People who are interested in joining an online book club.
-- People who want to share good books they read. 
-- People looking for book recommendations. 
-- People looking for detailed book reviews for book recommendations. 
+The target audience for Dogbird are:
+- People who enjoy playing games. 
+- People who are interested in playing games online. 
 
 User goals are:
-- To join an online book club. 
-- Find new reading material via the book club. 
-- Share books that I have enjoyed with other book club members. 
-- Share reviews about the books I have read. 
-- To be able to add, edit, and delete books on the website. 
-- Be able to navigate the website easily and view detailed information on books. 
+- To play a fun game. 
+- Information about the game and how to play it. 
+- Too have information on game controls. 
 
 ### The Bookshelf’s Goals
 
