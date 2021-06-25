@@ -44,7 +44,7 @@ window.onload = function(){
     ctx.drawImage(rocketSouth, 200,300);
     ctx.drawImage(fg, 0, 400);
     ctx.drawImage(dog, 10, 150);
-}
+};
 
 // start game function
 
@@ -52,7 +52,7 @@ function init(){
 
 // score
 
-var score = 0
+var score = 0;
 
 // gap variables
 
@@ -94,7 +94,7 @@ var rocketpos = [];
 rocketpos[0] = {
     x : cvs.width,
     y : 0,
-}
+};
 
 var randomNumber = Math.floor((Math.random() * 300) + 1);
 
@@ -138,7 +138,7 @@ function draw(){
         newScore.appendChild(newText);
         document.getElementById("scorelist").appendChild(newScore);
         }
-        location.return()
+        location.return();
         }
         }
 

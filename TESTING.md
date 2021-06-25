@@ -32,57 +32,34 @@ meets those needs.
 **As a visitor to Dogbird I expect/want/need:**
 
 1. **To be able to easily find the information I am looking for, the layout needs to make sense so that I am not put off.**
-    - Arrangement of site elements such as navbar, footer, icons, and forms conform to expected placement.
+   - The game is displayed on a single page and all information is clearly displayed and labelled. 
 
-1. **The site to be laid out in a way that is easy to navigate, so that I can find what I need.**
-    - The navbar offers easy navigation for the user and is clearly labeled.
-    - Icons and images are used to help the user digest information quickly.
+2. **The site to be laid out in a way that is easy to navigate, so that I can find what I need.**
+  - The game is divided into three easy to read sections; Game, Dogbird, and Highscore. 
+  - The Game section includes more information about the game. 
+  - Dogbird includes the actual game to play.
+  - Highscore is where the users highscores will be displayed. 
 
-1. **The site to be responsive and navigable for various device sizes; desktop, tablet, and phone. For the content to look good on all of the devices.**
-    - The use of the site has been extensively tested on desktop, tablet and phone size screens.
-    - The user can load the website on mobile, tablet, and desktop devices.
-    - All elements have been given a responsive design, so nothing to too squashed, squeezed or hard to read on any screen size a user might be using.
-    - The navbar has a collapsed menu for tablet and mobile viewing, this makes navigation easier for smaller devices.
+3. **The site to be responsive and navigable for various device sizes; desktop, tablet, and phone. For the content to look good on all of the devices.**
+   - The use of the site has been extensively tested on desktop, tablet and phone size screens.
+   - The user can load the website on mobile, tablet, and desktop devices.
+   - All elements have been given a responsive design, so nothing to too squashed, squeezed or hard to read on any screen size a user might be using.
 
-1. **To learn more about The Bookshelf.**
-    - The home page 'Who we are' offers more information about The Bookshelf, including some of the features it has. 
-    - The footer contains links to The Bookshelf's different social media accounts for more information. 
+4. **To learn more about Dogbird.**
+- In the Game section, there is an About section in the accordian, giving more information on the game Dogbird. 
 
-1. **To be able to connect to The Bookshelf’s social media accounts.** 
-    - The footer contains links to The Bookshelf's different social media accounts, including Facebook, Instagram, and Twitter. 
+5. **To learn how to play the game and the controls needed to do so.**
+   - In the Game section, there is a Controls section in the accordian, explaining the controls of th game.  
 
-1. **To be able to click on books for further information about them.**
-    - Each book contains a modal button under the book cover, which can be clicked on for further information on each of the books. 
-    - The modal contains the book cover image, title, author, synopsis, link to the Amazon store, and a review. 
+6. **To have information on the rules of the game.**
+   - In the Game section, there is a Rules section in the accordian, outlining the rules of Dogbird. 
 
-1. **A purchase link to be provided for each book, in the event that I would like to buy it.**
-    - Each book modal contains a link to the Amazon store, and has the option of hardcover, paperback, or kindle. 
+7. **To be able to see my highscores after each of my games.**
+   - After each game, the users highscore is updated under the high score section. 
+   - All highscores will remain there until the user refreshes the page. 
 
-1. **To be able to add, edit, and delete books that I would like to share with others.**
-    - The Add book page allows members to add books that they would like to share with others, by filling in the form and submitting the 
-      information. 
-    - Members are able to edit their own book additions by clicking the edit button within their book modal. The edit book page allows
-      members to cancel or save their edited book information. 
-    - Members are able to delete their own book additions by clicking the delete button within their book modal. This brings up a modal
-      askng whether they are sure they want to delete this book, giving them the option to cancel or delete. 
-
-1. **To be able to write reviews about the books I would like to share.**
-    - The Add book page requires members to add a review about the book they read before adding it, these reviews appear in the books 
-      modal. 
-
-1. **To be able to log in and out with ease.**
-    - Both log in and log out pages are displayed in the navbar, making it easy to do both functions. 
-    - The log in form is able to store your username and password if desired, making it easier and faster to log in. 
-
-1. **To be notified that I have logged in or out of my account.**
-    - When a member logs into their account, they are taken to their profile page, where a flash message displays 'Welcome, (Username)'.
-    - When logged out, a flash message displays 'You have been logged out', and bringing them back to the log in page. 
-
-1. **To be notified about changes that are made, inlcluding adding, editing, and deleting books.**
-    - Flash messages have been designed to notify members when any changes have been made. 
-    - When a member had added a book, a flash message displays 'Book successfully added'. 
-    - When a book has been edited, a flash message displays 'Book successfully updated'.
-    - When a member deletes a book, a flash message displays 'Book successfully deleted'.
+8. **For the game to have power ups that boost my score.**
+   - When playing the game, a bone is available for users to hover over, this boosts their score. 
 
 ## Manual Testing
 Below is a detailed account of all the manual testing that has been done to confirm all areas of the site work as expected. 
@@ -91,19 +68,21 @@ Below is a detailed account of all the manual testing that has been done to conf
 
 All steps on desktop were repeated in browsers: Firefox, Chrome and Safari. 
 
-#### Elements on every page
+## Existing Features
 
-1. Navbar 
+1. Game 
     - Clicked each link in the navbar to confirm that it leads to the correct page.
     - Confirm that when logged out the options "Register" and "Log in" are visible and that "Club picks", "Your picks", "Add book" and 
       "Log out" are not.
     - Log into the site, confirm that options ""Club picks", "Your picks", "Add book" and "Log out" are visible and that "Register" and 
       "Log in" are not.
 
-2. Footer
+2. Dogbird
     - Hover over links in the footer, confirm that they change color. 
     - Click all links in the footer, confirm that they take the user to the relevant pages within the site.
     - Click the facebook, instagram, and twitter icons, confirm that they open a new tab and take the user to the differnt social media sites. 
+
+3. Highscore 
 
 #### Who we are
 
@@ -278,4 +257,4 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 
 ## Further testing
 1. Asked friends and family to look at the site on their devices and report any issues they found.
-2. The Bookshelf viewed on all devices and orientations available in Chrome DevTools. 
+2. Dogbird was viewed on all devices and orientations available in Chrome DevTools. 

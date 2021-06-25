@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-<title>DOGBIRD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <title>DOGBIRD</title>
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row logo">
@@ -24,42 +26,43 @@
             <div class="col-lg-4">
                 <h2 class="headers">Game</h2>
                 <div class="spacing">
-                <button class="accordion">About</button>
+                    <button class="accordion">About</button>
                     <div class="paneldrop">
                         <p class="background">
-                            Is it a dog? Is it a bird? No, its Dogbird! A game of skill, luck, and chance. You 
+                            Is it a dog? Is it a bird? No, its Dogbird! A game of skill, luck, and chance. You
                             need to dodge pipes, catch treats and fly like your life depends on it. Best of luck!
                         </p>
                     </div>
-                <button class="accordion">Rules</button>
+                    <button class="accordion">Rules</button>
                     <div class="paneldrop">
                         <p class="background">
                             The aim of the game is to keep flying for as long as possible. You need to dodge the pipes
-                            while maneuvering between them. While dodging pipes, you need to  try and catch the bones,
-                            which when caught increase your score. 
+                            while maneuvering between them. While dodging pipes, you need to try and catch the bones,
+                            which when caught increase your score.
                         </p>
                     </div>
-                <button class="accordion">Controls</button>
+                    <button class="accordion">Controls</button>
                     <div class="paneldrop">
                         <p class="background">
-                            Click the start button to begin the game. Use your mouse or touch pad to move up and dodge 
-                            obstacles. Gravity will bring you back down to earth. 
+                            Click the start button to begin the game. Use your mouse or touch pad to move up and dodge
+                            obstacles. Gravity will bring you back down to earth.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 playarea">
                 <canvas id="canvas" width="288" height="512"></canvas>
-                <input type="button" value="Start" onclick="init()" id="btn"/>
+                <input type="button" value="Start" onclick="init()" id="btn" />
             </div>
             <div class="col-lg-4 highscorearea">
-                    <h2 class="headers">Highscore</h2>
-                    <div class="spacing">
-                        <div id="scorelist"></div>
-                    </div>
-            </div> 
+                <h2 class="headers">Highscore</h2>
+                <div class="spacing">
+                    <div id="scorelist"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
