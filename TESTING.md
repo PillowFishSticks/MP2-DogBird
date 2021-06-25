@@ -2,8 +2,6 @@
 
 [Main README.md file](README.md)
 
-[View website on Heroku](https://the-bookshelf-milestone.herokuapp.com/)
-
 ## Table of Contents
 
 1. [Automated Testing](#automated-testing)
@@ -18,7 +16,7 @@
 ## Automated Testing
 
 ### Validation Services
-The following validation services and linter were used to check the validity of the website code.
+The following validation services were used to check the validity of the website code.
 
 - [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML. 
 
@@ -26,16 +24,12 @@ The following validation services and linter were used to check the validity of 
 
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
 
-- [PEP8 online check](http://pep8online.com/) was used to check Python code for PEP8 requirements.
-
-- [Pylint](https://pypi.org/project/validator/) was used to validate Python.
-
 ## User Stories Testing
 
 The following section goes through the user stories identified in the [Ux section of README.md](README.md#UX) to check that the site 
 meets those needs.
 
-**As a visitor to The Bookshelf website I expect/want/need:**
+**As a visitor to Dogbird I expect/want/need:**
 
 1. **To be able to easily find the information I am looking for, the layout needs to make sense so that I am not put off.**
     - Arrangement of site elements such as navbar, footer, icons, and forms conform to expected placement.
