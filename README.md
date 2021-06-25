@@ -114,178 +114,47 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
  
 ## Existing Features
 
-### Elements on every page
+![Dogbird](/images/dogbird.png)
 
-#### Navbar
+**Game**
+- The game section outlines some informatioon about Dogbird, including About, Rules, and Controls, in the form of an accordian. 
+- About includes more information on Dogbird. 
+- Rules includes information how to play the game and how to increase your score. 
+- Controls includes information on the controls needed to play the game. 
 
-![Navbar](/static/images/navbar.png)
+**Dogbird**
+- This section includdes the actual game which is on a canvas. 
+- It includes a start button at the bottom of the canvas. 
+- The game includes sound effects when playing. 
 
-- The navbar features on every page. It is bright, with a mixture of two colours, creating an ombre effect. 
+**Highscore**
+- This section includes a list of all the scores a user gets when playing. 
+- Users are able to compare their different scores to track their progress. 
 
-- **In desktop view**  The navigation bar features the website name ‘The’ Bookshelf' on the far left, and website pages on the far right.
-  
-- A user who is logged in will see the options of Who we are, Club picks, Your picks, Add book, and Log out. 
+**Responsive layout**
 
-- A user or visitor who is not logged in will see the options of Who we are, Log in, and Register. 
+- **In desktop view**  The Game section is on the left, Dogbird is in the center, and the Highscore section is on the right. 
 
-- **In tablet and mobile view**  the name remains in the left side of the navigation bar, where users would expect it to be. The burger 
-  icon to display the full navigation menu is on the far right. 
-
-#### Footer
-
-![Footer](/static/images/footer.png)
-
-- The footer features on every page. It is deliberatly large and bright to attract visitors to sign up and become members and/or visit 
-  The Bookshelf's social media pages. 
-
-- The footer includes a tag line 'Not a Bookshelf member? Sign up here' with a clickable link that takes the user to the register page. 
-  This is located on the left hand side of the footer.  
-
-- The footer features links to The Bookshelf's social media accounts for Facebook, Instagram, and Twitter. These icons are located
-  on the right hand side of the footer. 
-
-### Who we are
-
-**About The Bookshelf**
-
-![About The Bookshelf](/static/images/who-we-are.png)
-
-- 'Who we are' includes a section about The Bookshelf. This includes a short blurb about The Bookshelf, the founder, and some of the
-  different features it includes. 
-
-- The blurb is positioned on the left hand side. 
-
-- An image of the founder is located on the right hand side, shaped in an oval. 
-
-- The blurb and image are encompassed in the same colour as the navbar. This creates a uniform background, blending the navbar with 
-  the blurb and image. 
-
-**Why The Bookshelf?**
-
-![Why The Bookshelf?](/static/images/why-the-bookshelf.png)
-
-- This section is located in the middle of the 'Who we are' page. It includes six blocks with verious shapes and colours. Each block 
-  includes a unique shape with some information about The Bookshelf. 
-
-- This section is used to create a fun way of telling visitors more about The Bookshelf. Short sentences make it easy for visitors
-  to gain knowledge about the website, without having to read long paragraphs. 
-
-**Donate Books**
-
-![Donate Books](/static/images/donate-books.png)
-
-- This is the last section of the 'Who we are' page. 'Donate Books' is a section provided to visitors/users to give them an option of 
-  where to donate books they might not want anymore. It is divided into three sections, each section having its own column. 
-
-- This includes a 'Who?' section, which tells the visitors/users who they could donate their books to, which includes a link to their 
-  website. 
-
-- The next section includes 'Why?', which tells the visitors/users why they should use Better World Books. 
-
-- The last section includes 'How?', which tells the visitors/users how they can go about donating books or how to support Better
-  World Books. 
-
-### Log in
-
-![Log in](/static/images/login.png)
-
-- The login page features a standard login form asking for username and password.
-- Validation for this form is handled in the back end and a flash message displays 'Welcome (username)'. 
-- Once logged in they are taken directly to their profile page. 
-
-### Register
-
-![Register](/static/images/register.png)
-
-- A user who is not logged in can create a new account using the register page. The page on this form includes a username 
- (which must be unique), and a password. 
-- If a user who already has an account tries to register, a flash message display 'Username already exists'. 
-
-### Club picks
-
-![Clubs picks](/static/images/club-picks.png)
-
-- This page displays all The Bookshelf's books added each month. There are four books in each row. 
-- The book is displayed by its cover image with a button under each book, displaying the month and year it was added. 
-- If the button is clicked on, it brings up a modal with futher information about the book. 
-
-**Modals**
-
-![Clubs picks modal](/static/images/club-picks-modal.png)
-
-- The modal is divided into two parts. The first being further information about the book, and the second being a review of the 
-  book by The Bookshelf. 
-- The first part contains the books image, when it was added, the title of the book, the author, a synopsis, and a link to Amazon
-  store if the member wishes to purchase the book. 
-- The second part is just a detailed review of the book by The Bookshelf. 
-- To close the modal, the member has the option of clicking the x icon on the top right hand side of the modal or the done button at 
-  the bottom of the modal. 
-
-### Your picks
-
-![Your picks](/static/images/your-picks.png)
-
-- The top of the page displays the members name, username's picks, indicating that this is their profile. 
-- This page displays all if The Bookshelf's members books added. There are four books in each row. 
-- The book is displayed by its cover image with a button under each book, displaying the member's name who added it. 
-- If the button is clicked on, it brings up a modal with futher information about the book. 
-
-**Modals**
-
-![Your picks](/static/images/your-picks-modal.png)
-
-- The modal is divided into two parts. The first being further information about the book, and the second being a review of the 
-  book by the member. 
-- The first part contains the books image, when it was added, the title of the book, the author, a synopsis, and a link to Amazon
-  store if the member wishes to purchase the book. 
-- The second part is just a detailed review of the book by The Bookshelf. 
-- The modal also gives the option of editing or deleting the book. Clicking on the edit button will take the member to the edit book page,
-  which is detailed further down. 
-- If the user clicks on the delete button, they are met with another modal that pops up asking if they are sure they want to delete the 
-  book. If they click cancel, it takes them back to their profile page. If they click delete, the book is deleted from their profile.  
-- To close the modal, the member has the option of clicking the x icon on the top right hand side of the modal or the done button at 
-  the bottom of the modal. 
-
-### Add book
-
-![Add book](/static/images/add-book.png)
-
-- This page contains a form for members to add a book to their profile for other members to see. 
-- It includes a section for the book title, author, a link to the book cover, a link to the Amazon store for the book, a synopsis, 
-  and the members personal review of the book. 
-- Once the book has been added, a flash message displays 'Book successfully added'. 
-
-### Edit book
-
-![Edit book](/static/images/edit-book.png)
-
-- This page is accessed within the edit button of the book modals in Your picks. It contains a form for members to edit a book that they have 
-  previously added.  
-- It is identical to the Add book page. 
-- Once the book has been edited, a flash message displays 'Book successfully updated'.
-- Members only have access to edit their own books, and are unable to edit other members books. 
-
-### Log out
-
-![Log out](/static/images/logout.png)
-
-- Any user who clicks on 'Log out' from the navigation bar is automatically logged out and their session data cleared. They are informed
-  that they have been logged out with a flash message displaying 'You have been logged out'. 
+- **In tablet and mobile view**  everything is stacked, with the Game section on top, followed by Dogbird, and finally the 
+  Highscore section. 
 
 ## Features for Future Releases
 
 1. **Add powerups**
-    - 
+    - Add more power ups to increase the users score when caught. 
+    - Negative power ups that could slow down the users character or decrease their score. 
 
 2. **Add different difficulty levels**
-    - Having an option for users to write a reviews on books added by The Bookshelf and its members. 
+    - Have different difficulty levels for the user to choose from, including easy, medium, and difficult. 
+    - Each level will come with its own power ups and an increase in the speed of the game. 
 
 3. **Add user functionality**
-    - Having an option for users to write a reviews on books added by The Bookshelf and its members. 
+    - Users need to create a username when they want to play. 
+    - Users will be able to compare their scores with other users. 
 
 4. **Character choice**
     - Users have the choice of different characters to play with. 
-    - When starting a new game, users  
+    - When starting a new game, users are able to choose a new character to play with. 
 
 # Technologies Used
 
