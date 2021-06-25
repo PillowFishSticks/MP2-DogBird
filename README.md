@@ -17,7 +17,6 @@ treats and fly like your life depends on it. Best of luck!
 
 3. [Technologies Used](#technologies-used)
     - [Tools](#tools)
-    - [Databases](#databases)
     - [Libraries](#libraries)
     - [Languages](#languages)
 
@@ -25,8 +24,8 @@ treats and fly like your life depends on it. Best of luck!
     - See seperate [TESTING.md](TESTING.md) file.
 
 5. [Deployment](#deployment)
+    - [Github Deployment](#heroku-deployment)
     - [How to run this project locally](#how-to-run-this-project-locally)
-    - [Heroku Deployment](#heroku-deployment)
  
 6. [Credits](#credits)
     - [Content](#content)
@@ -188,7 +187,7 @@ This project is hosted in GitHub pages
 4. The page refreshes auttomatically and the website is now deployed. 
 5. The link to the webpage is in the GitHub **Pages** section down below. 
 
-## To run the project locally 
+## How to run the project locally 
 
 To clone this project from GitHub
 
@@ -202,24 +201,21 @@ To clone this project from GitHub
 # Credits
 
 ## Content
-- Register, log in, log out, and add book form provided by [Bootsnipp](https://bootsnipp.com/).
-- Book synopses were taken from the [Goodreads](https://www.goodreads.com/) website. 
-- Book reviews were taken from the [Kirkus](https://www.kirkusreviews.com/) website.  
+- [freeCodeCamp](https://www.freecodecamp.org/) provided code for this project. 
+- [Mixkit](https://mixkit.co/) was used to create the MP3 sounds for Dogbird. 
 
 ## Images
-- Book cover images were taken from the [Goodreads](https://www.goodreads.com/) website. 
-- The founder image was taken from my personal collection of photos. 
-- The 'Why The Bookshelf?' image was created by myself with Powerpoint. 
+- All images were sourced from [CleanPNG](https://www.cleanpng.com/).
+- Images were resized using [Online PNG Tools](https://onlinepngtools.com/). 
 
 ## Code
 
 - The following websites helped me understand and create my website, by viewing examples and explanatons.
     - [W3schools](https://www.w3schools.com/)
-    - [Bootsnipp](https://bootsnipp.com/)
-    - [Code with Mosh](https://codewithmosh.com/)
+    - [Stack Overflow](https://stackoverflow.com/)
 
 - The following website provided inspiration for my website.
-    - [Reese's Book Club](https://reesesbookclub.com/picks/)
+    - [Flappy Bird](https://flappybird.io/)
 
 - The README file was taken from Anna Greave's 'The House of Mouse' project to use as a template.
     - [The House of Mouse by Anna Greaves ](https://github.com/AJGreaves/thehouseofmouse)
