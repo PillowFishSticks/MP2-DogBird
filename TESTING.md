@@ -71,109 +71,29 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Safari.
 ## Existing Features
 
 1. Game 
-    - Clicked each link in the navbar to confirm that it leads to the correct page.
-    - Confirm that when logged out the options "Register" and "Log in" are visible and that "Club picks", "Your picks", "Add book" and 
-      "Log out" are not.
-    - Log into the site, confirm that options ""Club picks", "Your picks", "Add book" and "Log out" are visible and that "Register" and 
-      "Log in" are not.
+    - Clicked on each section of the accordian to ensure it collapsed. 
+    - Checked that the accordian changed to bright purple when collapsed. 
+    - Checked that the accordian changedd back to bright pink when not collapsed. 
+    - Ensure all text was spelt correctly and legiable. 
 
 2. Dogbird
-    - Hover over links in the footer, confirm that they change color. 
-    - Click all links in the footer, confirm that they take the user to the relevant pages within the site.
-    - Click the facebook, instagram, and twitter icons, confirm that they open a new tab and take the user to the differnt social media sites. 
+    - Clicked the Start button to ensure that the game began when clicked on. 
+    - Used the mouse or touch pad to ensure the game controls worked. 
+    - Put the volume to check if the sounds worked. 
+    - Lost the game to ensure the score was displayed on the canvas when the game was over. 
 
 3. Highscore 
-
-#### Who we are
-
-1. About The Bookshelf 
-    - Adjust width of browser window, confirm image is always cropped in an attractive way.
-
-2. Why The Bookshelf?
-    - Adjust width of browser window, confirm image is always cropped in an attractive way.
-
-3. Donate books
-    - Click link to confirm it takes the user to the correct page, in a new tab. 
-
-#### Log in
-
-- Attempt to log in with a username not in the database, confirm the relevant error message is shown.
-- Attempt to log in with a correct username but wrong password, confirm the relevant error message is shown.
-- Log in with a correct username and password, confirm that the user is logged in and that they are redirected to the Your picks page.
-
-#### Register
-
-- Log out then go to the register page. Confirm that the register form is displayed as expected.
-- Fill in the form with a username already in the database, confirm that the user is informed that the username already exists. 
-- Fill in the registration form correctly, confirm that the user is automatically directed to the Your picks page, and the message 
-  "Weclome `<username>`." is displayed above the Your picks page. 
-
-#### Club picks
-
-- Go to the Club picks page and check that it is laid out correctly, 4 books to a row. 
-- Click the modal button below each book cover to ensure the modal works. 
-- Check that that the modal is laid out correctly, with all necessary information present. 
-- Click on the Amazon link, to ensure it opens up a new tab and takes you to the correct book to purchase. 
-- Click all the buttons, making sure they close the modal. 
-
-#### Your picks
-
-- Go to the Your picks page and check that it is laid out correctly, 4 books to a row. 
-- Confirm that above the Your picks page, the heading "`<username>`'s picks" is displayed, depending on who is logged in. 
-- Click the modal button below each book cover to ensure the modal works. 
-- Check that that the modal is laid out correctly, with all necessary information present. 
-- Click on the Amazon link, to ensure it opens up a new tab and takes you to the correct book to purchase. 
-- Click the edit button on a modal to make sure it takes you to the Edit book page with all previous book information entered. 
-- Click the delete button on a modal to check whether an additional modal pops up asking if the user is sur they want to delete this book. 
-  Click the delete button to delete the book and ensure it is deleted from the Your picks page and the database. 
-
-#### Add book
-
-- Go to Add book page and ensure the form is laid out correctly. 
-- Try and submit the form with information missing to ensure that it doesn't send. 
-- Fill out the form correctly and click the submit button, ensure that the user is redirected to the Your picks page and that the message 
-  "Book successfully added" displays at the top of the page. 
-- Check that when a book has been added, that is displays on the Your picks page and the information is added to the database. 
-
-#### Edit book
-
-- Go to the Ypur picks page and click on a modal of a book I added. Click on the edit button to open up the Edit book page. 
-- Check that the form is laid out correctly, with all previous book information present in the form. 
-- Edit the content and click the submit button, ensure that the user is redirected to the Your picks page and that the message 
-  "Book successfully updated" displays at the top of the page. 
-- Check that when a book has been edited, that the changes are displayed on the Your picks page and the information has been updated in 
-  the database. 
-
-#### Log out
-
-- Click Logout in the navbar to ensure that the user is logged out and redirected to the log in page with the following message 
-  displayed "You have been logged out". 
+   - Played a few games to ensure the highscore was updated and displayed after each game. 
 
 ### Testing undertaken on tablet and phone devices
 All steps below were repeated to test mobile and tablet specific elements on my iPhone and iPad, in both the Safari browser and Google 
 Chrome browser.
 
-Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
-
-#### Elements on every page
-
-1. Navbar 
-    - Open the website on mobile and tablet, confirm that the navbar is collapsed into a burger icon
-    - click the burger icon, confirm that the navbar list appears are expected.
-
-2. Footer
-    - Scroll to the bottom of the page, confirm that the footer content is displayed as expected with the bootstrap grid.
-    - No content squashed or squeezed or disproportionate in size.
-    - Confirm that all links and buttons in footer are easy to click with a finger on the smallest screen sizes.
-
-3. Club picks and Your picks pages
-    - Confirm that the books ar displayed 2 to a row on mobile, and 3 to a row on tablet.
-    - Confirm that all clicks and swipes operate as expected on touch screen.
-    - Check that modals are the correct proportions and that all their buttons are easily clickable with a finger.
-
-5. All pages
-    - Navigate to all pages on the site, check that the layout is as expected for the screen size.
-    - Check that all buttons, forms and other elements are the correct proportions and easily clickable with a finger.
+   - Check that different page sections are stacked on top of one another. 
+   - Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
+   - Check that all buttons, and other elements are the correct proportions and easily clickable with a finger.
+   - No content squashed or squeezed or disproportionate in size.
+   - Confirm that all clicks and swipes operate as expected on touch screen.
 
 ## Solved bugs
 
