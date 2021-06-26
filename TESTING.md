@@ -97,83 +97,63 @@ Chrome browser.
 
 ## Solved bugs
 
-1. **Flash messages not displaying**
-   - None of the flash messages were displaying when logging in and out. 
-   - Flash messages were hidden by the navbar. 
-   - To fix this I increased the top margin of the flash messages, so that they appeared below the navbar. 
+1. **Game images were too large**
+   - Game images were too large and would not fit on the game canvas. 
+   - To fix this I resized the images using [Online PNG Tools](https://onlinepngtools.com/). 
 
-2. **When running the app.py file the js file was displaying a 404 error in the terminal**
-   - When running the app.py file I was getting the following message in the terminal `J"GET /%7Burl_for('static',%20filename='js/script.js')%20%7D%7D HTTP/1.1" 404`
-   - The js link at the bottom of the base.html page was missing a curly bracket. When this was added the 404 error disappeared. 
+2. **The game was running without a start function**
+   - I fixed this by adding a start function to the game. 
 
-3. **Alert boxes displaying flash messages won't close when the x icon is clicked**
-   - Any time a flash messaged displayed, I was unable to close it. 
-   - To fix this bug I added the following on click function `onclick="this.parentElement.style.display='none';"` to the alert box button. 
-
-   ```html
-   <div class="alert success flashes">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <strong>{{ message }}</strong>
-        </div>
+    ```JavaScript
+      function init(){
     ```
 
-4. **Modals are not updating with the correct book content**
-   - When each of the book modals are clicked on, they are all appearing with the first books' content on not their own content. 
-   - To fix this I gave each books' modal button a unique data-bs-target that matched the modal's id.  
+3. **The score was not starting at 0 at the beginning of each game**
+   - The score was not starting at 0 at the beginning of each game, because the score variable was not within the start function.
+   - To fix this I moved the score variable within the start function. 
 
-5. **A book was added to the database, but was not displaying on the members profile**
-   - When adding a book via the Add book page, it would display the flash message 'Book successfully added', but was not displaying on 
-     the members profile. I checked the database to ensure the data had been added, and it had. 
-   - This bug was fixed by changing the href in the Your picks page to access the username instead of the book_name when displaying the 
-     book's image. 
+4. **The pipes were floating on the canvas**
+   - The pipes were floating on the canvas and not aligned with the background. 
+   - I increased the gap size of the top and bottom pipe to align it with the background. 
 
-     From 
+5. **The event listener for movement was assigned to any keyboard control**
+   - The event listener for movement was assigned to any keyboard control, but it wasn’t responsive for mobile devices.
+   - This was fixed by changing the event listener to a mouse control so that it is responsive for mobile devices. 
 
- ```html
- <a href="{{ url_for('your_picks', book_name=your_picks._id) }}"></a>
- ```
-     
-     to 
+6. **The bone power up wasn’t appearing randomly in the game**
+   - This was fixed by adding used a math random function for it to appear randomly around the screen. 
 
- ```html
- <a href="{{ url_for('your_picks', username=your_picks._id) }}"></a>
- ```
+7. **The game was not resetting after the user collided with a pipe**
+   - This bug was fixed by adding a return function within the if statement for the js to end.
 
-6. **The author's name was not displaying in the book modals**
-   - When opening the book modals, none of the author's names were displaying. When I checked the database 'null' was displayed next to
-     author_name. 
-   - In the Add book template, book_author was used in the label, name and id, instead of author_name. Once this was changed, the authors'
-     names were displaying in the modals.  
+    ```JavaScript
+       if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width 
+        && (dY <= rocketpos[i].y + rocketNorth.height || dY+dog.height >=
+        rocketpos[i].y+constant) || dY + dog.height >= cvs.height - fg.height){
+        {
+        death.play();
+        }
+        {
+        ctx.drawImage(bg,0,0);
+        ctx.font = "20px serif";
+        ctx.strokeText("Game over, your score is "+score, 30, 100);
+        {
+    ```
 
-7. **Horizontal scroll present on home page**
-   - To fix this bug, the footer was deleted from the home page template, as the home page was extended from the base template, which already
-     included the footer. 
+8. **The highscore list wasn’t saving**
+   - The highscore list wasn’t saving, it reloaded when the user clicked start. 
+   - This bug was fixed by adding a create element fuction.  line 136 
 
-8. **Your picks page and modal displaying incorrect names of the members who added books**
-   - If a book was uploaded by another member, it does not display that members name on the Your picks page or in the modal. Instead,
-     it displays the name of the member logged in. 
-   - This bug was fixed by changing `{{ username }}’s review` which displayed the name of whoever was logged in, to 
-     `{{ your_picks.created_by }}'s review`, which displays the name of the member who added the book. 
-
-9. **When deleting a book, the incorrect book was deleted**
-   - When deleting a book, the previous book added by a member was deleted, whether it was their book they uploaded or another member's book. 
-   - This bug was fixed by appending {{ your_picks._id }} to the delete modal button's data-bs-target and the delete modal's id. 
-
-```html
- <!-- Modal button for Delete Book modal -->
-                    <button class="btn btn-danger" data-bs-target="#modal-delete{{ your_picks._id }}"
-                        data-bs-toggle="modal" data-bs-dismiss="modal">Delete</button>
-```
-
-```html
-<!-- Modal for Delete Book -->
-    <div class="modal fade" id="modal-delete{{ your_picks._id }}" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-```
-
-10. **The background color on the home page not stretching the full browser width**
-    - This bug was fixed by adding the container-fluid class to the <main> element in the base.html page and deleting all container classes
-      in the other templates. 
+    ```JavaScript
+        var newScore = document.createElement("P");
+        var newText = document.createTextNode("Score to beat is "+score);
+        newScore.appendChild(newText);
+        document.getElementById("scorelist").appendChild(newScore);
+        }
+        location.return();
+        }
+        }
+    ```
 
 ## Further testing
 1. Asked friends and family to look at the site on their devices and report any issues they found.
