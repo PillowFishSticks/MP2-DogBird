@@ -29,12 +29,12 @@ var rocketNorth = new Image();
 var rocketSouth = new Image();
 var bone = new Image ();
 
-dog.src = "../images/dogrocket.png";
-bg.src = "../images/sbg.png";
-fg.src = "../images/fg.png";
-rocketNorth.src = "../images/rocketNorth.png";
-rocketSouth.src = "../images/rocketSouth.png";
-bone.src = "../images/bone.png";
+dog.src = "/images/dogrocket.png";
+bg.src = "/images/sbg.png";
+fg.src = "/images/fg.png";
+rocketNorth.src = "/images/rocketNorth.png";
+rocketSouth.src = "/images/rocketSouth.png";
+bone.src = "/images/bone.png";
 
 // static image onload
 
