@@ -44,7 +44,7 @@ window.onload = function(){
     ctx.drawImage(rocketSouth, 200,300);
     ctx.drawImage(fg, 0, 400);
     ctx.drawImage(dog, 10, 150);
-};
+}
 
 // start game function
 
