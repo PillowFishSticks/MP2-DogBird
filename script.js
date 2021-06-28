@@ -29,12 +29,12 @@ var rocketNorth = new Image();
 var rocketSouth = new Image();
 var bone = new Image ();
 
-dog.src = "https://github.com/PillowFishSticks/MP2-Catbird/images/dogrocket.png";
-bg.src = "https://github.com/PillowFishSticks/MP2-Catbird/images/sbg.png";
-fg.src = "https://github.com/PillowFishSticks/MP2-Catbird/images/fg.png";
-rocketNorth.src = "https://github.com/PillowFishSticks/MP2-Catbird/images/rocketNorth.png";
-rocketSouth.src = "https://github.com/PillowFishSticks/MP2-Catbird/images/rocketSouth.png";
-bone.src = "https://github.com/PillowFishSticks/MP2-Catbird/images/bone.png";
+dog.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/dogrocket.png";
+bg.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/sbg.png";
+fg.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/fg.png";
+rocketNorth.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/rocketNorth.png";
+rocketSouth.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/rocketSouth.png";
+bone.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/bone.png";
 
 // static image onload
 
@@ -73,8 +73,8 @@ var gravity = 1;
 var gapscore = new Audio();
 var death = new Audio();
 
-gapscore.src ="..https://github.com/PillowFishSticks/MP2-Catbird/audio/gapscore.mp3";
-death.src ="..https://github.com/PillowFishSticks/MP2-Catbird/audio/death.mp3";
+gapscore.src ="https://pillowfishsticks.github.io/MP2-Catbird/audio/gapscore.mp3";
+death.src ="https://pillowfishsticks.github.io/MP2-Catbird/audio/death.mp3";
 
 
 // onkey down
