@@ -70,11 +70,9 @@ var gravity = 1;
 
 // audio file
 
-var fly = new Audio();
 var gapscore = new Audio();
 var death = new Audio();
 
-fly.src ="../audio/bark.mp3";
 gapscore.src ="../audio/gapscore.mp3";
 death.src ="../audio/death.mp3";
 
@@ -84,7 +82,6 @@ document.addEventListener("click", moveUp);
 
 function moveUp (){
     dY -= 25;
-    fly.play();
 }
 
 // rocket placement
