@@ -81,7 +81,7 @@ death.src ="https://pillowfishsticks.github.io/MP2-Catbird/audio/death.mp3";
 document.addEventListener("click", moveUp);
 
 function moveUp (){
-    dY -= 25;
+    dY -= 40;
 }
 
 // rocket placement
