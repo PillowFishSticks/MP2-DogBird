@@ -1,4 +1,4 @@
-# The Bookshelf - Testing details
+# Dogbird - Testing details
 
 [Main README.md file](README.md)
 
