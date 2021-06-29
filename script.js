@@ -108,7 +108,7 @@ function draw(){
     for(var i = 0; i < rocketpos.length; i++){
         ctx.drawImage(rocketNorth,rocketpos[i].x,rocketpos[i].y);
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
-        ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 160);
+        ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 50);
 
         if(rocketpos[i].x == 120){
             rocketpos.push({
@@ -142,15 +142,12 @@ function draw(){
         }
 
         if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width 
-        && dY <= rocketpos[i].y + randomNumber + 160 + bone.height)
+        && dY <= rocketpos[i].y + randomNumber + 50 + bone.height)
         {
-        ctx.clearRect(rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 160, bone.width, bone.height);  
+        ctx.clearRect(rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 50, bone.width, bone.height);  
         ctx.drawImage(bg,0,0);
         score+=1;
         }
-        
-        
-        
         
         // score 
         if (score <= 300) {
