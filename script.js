@@ -153,7 +153,7 @@ function draw(){
         
         
         // score 
-        if (score <= 100) {
+        if (score <= 300) {
         rocketpos[i].x-=1; 
         } else (score >=301 <= 400){
         rocketpos[i].x-=2;
