@@ -153,11 +153,10 @@ function draw(){
         
         
         // score 
-        if (score <= 300) {
+        if (score <= 100) {
         rocketpos[i].x-=1; 
-        } else if (score >=301){
+        } else (score >=301 <= 400){
         rocketpos[i].x-=2;
-        ctx.drawImage(bgaft,0,0);
         }
          
 
