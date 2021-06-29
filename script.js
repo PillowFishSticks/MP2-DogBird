@@ -37,6 +37,8 @@ fg.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/fg.png";
 rocketNorth.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/rocketNorth.png";
 rocketSouth.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/rocketSouth.png";
 bone.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/bone.png";
+bgsp.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/bgsp.png";
+bgaft.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/bgaft.png";
 
 // static image onload
 
@@ -144,7 +146,7 @@ function draw(){
         if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width 
         && dY <= rocketpos[i].y + randomNumber + 160 + bone.height)
         {
-        ctx.clearRect(rocketpos[i].x + 80,rocketpos[i].y + randomNumber +160, bone.width, bone.height);  
+        ctx.clearRect(rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 160, bone.width, bone.height);  
         ctx.drawImage(bg,0,0);
         score+=1;
         }
@@ -155,9 +157,7 @@ function draw(){
         // score 
         if (score <= 100) {
         rocketpos[i].x-=1; 
-        } else if (score >=101 && score <=250){
-        rocketpos[i].x-=2;
-        } else if (score >= 250){
+        } else if (score >=101){
         rocketpos[i].x-=2;
         }
          
