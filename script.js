@@ -28,6 +28,8 @@ var fg = new Image();
 var rocketNorth = new Image();
 var rocketSouth = new Image();
 var bone = new Image ();
+var bgsp = new Image ();
+var bgaft = new Image ();
 
 dog.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/dogrocket.png";
 bg.src = "https://pillowfishsticks.github.io/MP2-Catbird/images/sbg.png";
@@ -108,14 +110,6 @@ function draw(){
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
         ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 160);
 
-        if (score <= 100){
-        rocketpos[i].x-=1;
-        } else if (score >=101 && score <=250){
-        rocketpos[i].x-=2;
-        } else if (score >=251){
-        rocketpos[i].x-=3;
-        }
-
         if(rocketpos[i].x == 120){
             rocketpos.push({
                 x : cvs.width,
@@ -159,6 +153,14 @@ function draw(){
         
         
         // score 
+        if (score <= 100) {
+        rocketpos[i].x-=1; 
+        } else if (score >=101 && score <=250){
+        rocketpos[i].x-=2;
+        } else if (score >= 250){
+        rocketpos[i].x-=2;
+        }
+         
 
         if(rocketpos[i].x == 6){
             score++;
