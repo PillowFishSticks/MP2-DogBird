@@ -94,7 +94,7 @@ rocketpos[0] = {
     y : 0,
 };
 
-var randomNumber = Math.floor((Math.random() * 100) + 15);
+var randomNumber = Math.floor((Math.random() * 200) +100);
 
 
 // draw images
@@ -106,15 +106,17 @@ function draw(){
     for(var i = 0; i < rocketpos.length; i++){
         ctx.drawImage(rocketNorth,rocketpos[i].x,rocketpos[i].y);
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
-        ctx.drawImage(bone,rocketpos[i].x + randomNumber,rocketpos[i].y + randomNumber);
+        ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 160);
 
-        if (score <= 50){
+        if (score <= 100){
         rocketpos[i].x-=1;
-        } else if (score >=51){
+        } else if (score >=101 && score <=250){
         rocketpos[i].x-=2;
+        } else if (score >=251){
+        rocketpos[i].x-=3;
         }
 
-        if(rocketpos[i].x == 126){
+        if(rocketpos[i].x == 120){
             rocketpos.push({
                 x : cvs.width,
                 y : Math.floor(Math.random()*rocketNorth.height)-
@@ -145,17 +147,20 @@ function draw(){
         }
         }
 
-        if (dX + dog.width >= rocketpos[i].x + randomNumber && dX <= rocketpos[i].x + randomNumber + bone.width 
-        && (dY <= rocketpos[i].y + randomNumber + bone.height)
-        ) 
+        if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width 
+        && dY <= rocketpos[i].y + randomNumber + 160 + bone.height)
         {
-        score+=1;    
+        ctx.clearRect(rocketpos[i].x + 80,rocketpos[i].y + randomNumber +160, bone.width, bone.height);  
+        ctx.drawImage(bg,0,0);
+        score+=1;
         }
+        
+        
         
         
         // score 
 
-        if(rocketpos[i].x == 5){
+        if(rocketpos[i].x == 6){
             score++;
             gapscore.play();
         }
@@ -167,6 +172,8 @@ function draw(){
     ctx.drawImage(dog,dX,dY);
 
     dY += gravity;
+
+    
 
     ctx.fillSyle = "black";
     ctx.font = "20px Verdana";
