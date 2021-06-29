@@ -117,6 +117,14 @@ function draw(){
             });
         }
 
+        if(score >= 100){
+            rocketpos[i].x--*2;
+        }
+
+        if(score >= 400){
+            rocketpos[i].x--*3;
+        }
+
         // collision
 
         if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width 
