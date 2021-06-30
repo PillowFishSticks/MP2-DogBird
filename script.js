@@ -110,12 +110,8 @@ function draw(){
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
         ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 50);
         
-        if(score <=10){
-            rocketpos[i].x-=1;
-        } else {
-            rocketpos[i].x-=2;
-        }
-        
+        rocketpos[i].x-=1;
+               
 
         if(rocketpos[i].x == 90)
         {
