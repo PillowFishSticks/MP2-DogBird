@@ -104,18 +104,27 @@ var randomNumber = Math.floor((Math.random() * 200) +100);
 function draw(){
 
     ctx.drawImage(bg,0,0);
-
+    
     for(var i = 0; i < rocketpos.length; i++){
         ctx.drawImage(rocketNorth,rocketpos[i].x,rocketpos[i].y);
         ctx.drawImage(rocketSouth,rocketpos[i].x,rocketpos[i].y+constant);
         ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 50);
+        
+        if(score <=10){
+            rocketpos[i].x-=1;
+        } else {
+            rocketpos[i].x-=2;
+        }
+        
 
-        if(rocketpos[i].x == 120){
+        if(rocketpos[i].x == 90)
+        {
             rocketpos.push({
                 x : cvs.width,
                 y : Math.floor(Math.random()*rocketNorth.height)-
                 rocketNorth.height
             });
+            
         }
         
 
@@ -150,12 +159,6 @@ function draw(){
         }
         
         // score 
-        if (score <= 300) {
-        rocketpos[i].x-=1; 
-        } else {
-        rocketpos[i].x-=2;
-        }
-         
 
         if(rocketpos[i].x == 6){
             score++;
