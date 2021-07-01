@@ -89,7 +89,6 @@ var death = new Audio();
 gapscore.src ="https://pillowfishsticks.github.io/MP2-Catbird/audio/gapscore.mp3";
 death.src ="https://pillowfishsticks.github.io/MP2-Catbird/audio/death.mp3";
 
-
 // onkey down
 document.addEventListener("click", moveUp);
 
