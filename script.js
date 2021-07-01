@@ -170,7 +170,15 @@ function draw(){
             gapscore.play();
         }
 
-        // speed up        
+        // speed up      
+        
+        if(time >= 10){
+            gravity = 1.5;
+        } else if(time >= 60){
+            gravity = 2;
+        } else if(time >= 90){
+            gravity = 3;
+        }
     }
 
     ctx.drawImage(fg,0,cvs.height - fg.height);
