@@ -52,6 +52,16 @@ window.onload = function(){
 
 function init(){
 
+// time variable
+
+var time = 1;
+
+var interval = setInterval( increment, 1000);
+
+function increment(){
+    time = time % 360 + 1;
+}
+
 // score
 
 var score = 0;
@@ -111,7 +121,6 @@ function draw(){
         ctx.drawImage(bone,rocketpos[i].x + 80,rocketpos[i].y + randomNumber + 50);
         
         rocketpos[i].x-=1;
-               
 
         if(rocketpos[i].x == 90)
         {
@@ -160,6 +169,12 @@ function draw(){
             score++;
             gapscore.play();
         }
+
+        // speed up
+
+        if(time >= 10){
+          gravity = 3;
+        }
         
     }
 
@@ -168,12 +183,12 @@ function draw(){
     ctx.drawImage(dog,dX,dY);
 
     dY += gravity;
-
     
 
     ctx.fillSyle = "black";
     ctx.font = "20px Verdana";
     ctx.fillText("Score : "+score,10, 50);
+    ctx.fillText("Time : "+time,190, 50);
     
     requestAnimationFrame(draw);
 }
