@@ -80,6 +80,8 @@ As a visitor to the Dogbird game I expect/want/need:
 
 8. For the game to have power ups that boost my score.
 
+9. A timer to be displayed on the game to keep track of game time. 
+
 ## Design Choices
 
 Dogbird has a fun feel to it, displaying the game information in a quirky and easy to read manner, with the game easily accessable. 
@@ -125,6 +127,8 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - This section includdes the actual game which is on a canvas. 
 - It includes a start button at the bottom of the canvas. 
 - The game includes sound effects when playing. 
+- A timer displays once the game starts. 
+- The game character falls faster at 10, 30, and 90 secoonds. Making the game more difficult the longer users play. 
 
 **Highscore**
 - This section includes a list of all the scores a user gets when playing. 

@@ -61,6 +61,13 @@ meets those needs.
 8. **For the game to have power ups that boost my score.**
    - When playing the game, a bone is available for users to hover over, this boosts their score. 
 
+9. **A timer to be displayed on the game to keep track of game time.**
+   - When playing the game a timer starts once you press the start button. 
+   - When the game ends it displays the users final game time. 
+
+10. **Have the game become more difficult the longer I play for.**
+   - The game character falls faster at 10, 30, and 90 seconds. Making the game more difficult the longer users play for.
+
 ## Manual Testing
 Below is a detailed account of all the manual testing that has been done to confirm all areas of the site work as expected. 
 
