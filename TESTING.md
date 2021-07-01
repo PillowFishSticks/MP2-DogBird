@@ -13,7 +13,7 @@
 4. [Solved bugs](#solved-bugs)
 5. [Further Testing](#further-testing)
 
-## Automated Testing
+## Code Validation
 
 ### Validation Services
 The following validation services were used to check the validity of the website code.
@@ -35,10 +35,10 @@ meets those needs.
    - The game is displayed on a single page and all information is clearly displayed and labelled. 
 
 2. **The site to be laid out in a way that is easy to navigate, so that I can find what I need.**
-  - The game is divided into three easy to read sections; Game, Dogbird, and Highscore. 
-  - The Game section includes more information about the game. 
-  - Dogbird includes the actual game to play.
-  - Highscore is where the users highscores will be displayed. 
+   - The game is divided into three easy to read sections; Game, Dogbird, and Highscore. 
+   - The Game section includes more information about the game. 
+   - Dogbird includes the actual game to play.
+   - Highscore is where the users highscores will be displayed. 
 
 3. **The site to be responsive and navigable for various device sizes; desktop, tablet, and phone. For the content to look good on all of the devices.**
    - The use of the site has been extensively tested on desktop, tablet and phone size screens.
@@ -86,8 +86,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Safari.
    - Played a few games to ensure the highscore was updated and displayed after each game. 
 
 ### Testing undertaken on tablet and phone devices
-All steps below were repeated to test mobile and tablet specific elements on my iPhone and iPad, in both the Safari browser and Google 
-Chrome browser.
+All steps below were repeated to test mobile and tablet specific elements on iPhone 5, 6, 7, 8, iPad, and iPad Pro. 
 
    - Check that different page sections are stacked on top of one another. 
    - Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
