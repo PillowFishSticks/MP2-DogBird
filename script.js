@@ -170,12 +170,7 @@ function draw(){
             gapscore.play();
         }
 
-        // speed up
-
-        if(time >= 10){
-          gravity = 3;
-        }
-        
+        // speed up        
     }
 
     ctx.drawImage(fg,0,cvs.height - fg.height);
