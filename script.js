@@ -122,7 +122,7 @@ function draw(){
         
         rocketpos[i].x-=1;
 
-        if(rocketpos[i].x == 90)
+        if(rocketpos[i].x == 130)
         {
             rocketpos.push({
                 x : cvs.width,
@@ -170,7 +170,7 @@ function draw(){
             gapscore.play();
         }
 
-        // speed up      
+        // reduce gravity      
         
         if(time >= 10){
             gravity = 1.5;
