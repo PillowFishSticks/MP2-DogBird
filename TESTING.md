@@ -94,6 +94,10 @@ All steps below were repeated to test mobile and tablet specific elements on iPh
    - No content squashed or squeezed or disproportionate in size.
    - Confirm that all clicks and swipes operate as expected on touch screen.
 
+### Browser compatibilty
+
+![Browser compatibilty](/images/browser-compatibility.png)
+
 ## Solved bugs
 
 1. **Game images were too large**
