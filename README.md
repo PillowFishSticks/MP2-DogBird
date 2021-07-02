@@ -82,6 +82,8 @@ As a visitor to the Dogbird game I expect/want/need:
 
 9. A timer to be displayed on the game to keep track of game time. 
 
+10. Have the game become more difficult the longer I play for.
+
 ## Design Choices
 
 Dogbird has a fun feel to it, displaying the game information in a quirky and easy to read manner, with the game easily accessable. 
