@@ -153,8 +153,6 @@ function init() {
 
             if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width &&
                 dY <= rocketpos[i].y + randomNumber + 50 + bone.height) {
-                ctx.clearRect(rocketpos[i].x + 80, rocketpos[i].y + randomNumber + 50, bone.width, bone.height);
-                ctx.drawImage(bg, 0, 0);
                 score += 1;
             }
 
