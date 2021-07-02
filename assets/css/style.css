@@ -158,31 +158,6 @@ h1 {
 
 }
 
-@media only screen and (min-width: 320px) and (max-width: 568px) {
-
-#btn {
-    margin-left: 90px;
-}
-
-.logo {
-    margin-top: 30px;
-}
-
-.playarea {
-    margin-top: 30px;
-}
-
-.spacing {
-    margin-left: 20px;
-    width: 250px;
-}
-
-.highscorearea{
-    margin-top: 40px;
-}
-
-}
- 
 
 
 
