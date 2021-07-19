@@ -86,10 +86,12 @@ function init() {
     var gapscore = new Audio();
     var death = new Audio();
     var bonesound = new Audio();
+    var gravityincrease = new Audio();
 
     gapscore.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/gapscore.mp3";
     death.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/death.mp3";
     bonesound.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/bonesound.mp3";
+    gravityincrease.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/gravityincrease.mp3";
 
     // onkey down
     document.addEventListener("click", moveUp);
@@ -170,10 +172,13 @@ function init() {
 
             if (time >= 10) {
                 gravity = 1.5;
+                gravityincrease.play();
             } else if (time >= 60) {
                 gravity = 2;
+                gravityincrease.play();
             } else if (time >= 90) {
                 gravity = 3;
+                gravityincrease.play();
             }
         }
 
