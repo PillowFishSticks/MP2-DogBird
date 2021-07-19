@@ -85,9 +85,11 @@ function init() {
 
     var gapscore = new Audio();
     var death = new Audio();
+    var bonesound = new Audio();
 
     gapscore.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/gapscore.mp3";
     death.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/death.mp3";
+    bonesound.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/bonesound.mp3";
 
     // onkey down
     document.addEventListener("click", moveUp);
@@ -154,6 +156,9 @@ function init() {
             if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width &&
                 dY <= rocketpos[i].y + randomNumber + 50 + bone.height) {
                 score += 1;
+                {
+                bonesound.play();
+                }
             }
 
             // score 
