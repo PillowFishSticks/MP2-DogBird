@@ -187,7 +187,7 @@ function init() {
         ctx.fillSyle = "black";
         ctx.font = "20px Verdana";
         ctx.fillText("Score : " + score, 10, 50);
-        ctx.fillText("Time : " + time, 190, 50);
+        ctx.fillText("Time : " + time, 180, 50);
 
         requestAnimationFrame(draw);
     }
