@@ -156,9 +156,7 @@ function init() {
             if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width &&
                 dY <= rocketpos[i].y + randomNumber + 50 + bone.height) {
                 score += 1;
-                {
                 bonesound.play();
-                }
             }
 
             // score 
