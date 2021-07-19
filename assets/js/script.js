@@ -169,9 +169,9 @@ function init() {
 
             // reduce gravity      
 
-            if (time >= 10) {
+            if (time <= 59 && time >= 10) {
                 gravity = 1.5;
-            } else if (time >= 60) {
+            } else if (time <= 89 && time >= 60) {
                 gravity = 2;
             } else if (time >= 90) {
                 gravity = 3;
