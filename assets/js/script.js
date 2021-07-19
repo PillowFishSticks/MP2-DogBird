@@ -172,12 +172,19 @@ function init() {
 
             if (time >= 10) {
                 gravity = 1.5;
-                gravityincrease.play();
             } else if (time >= 60) {
                 gravity = 2;
-                gravityincrease.play();
             } else if (time >= 90) {
                 gravity = 3;
+            }
+
+            // gap increase sound
+
+            if (time = 10){
+                gravityincrease.play();
+            } else if (time = 60){
+                gravityincrease.play();
+            } else if (time = 90){
                 gravityincrease.play();
             }
         }
