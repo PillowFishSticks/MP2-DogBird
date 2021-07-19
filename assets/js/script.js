@@ -177,16 +177,6 @@ function init() {
             } else if (time >= 90) {
                 gravity = 3;
             }
-
-            // gap increase sound
-
-            if (time = 10){
-                gravityincrease.play();
-            } else if (time = 60){
-                gravityincrease.play();
-            } else if (time = 90){
-                gravityincrease.play();
-            }
         }
 
         ctx.drawImage(fg, 0, cvs.height - fg.height);
