@@ -19,10 +19,16 @@
 The following validation services were used to check the validity of the website code.
 
 - [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML. 
+![HTML validation](/images/html-validation.png)
+
 
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
+![CSS validation](/images/css-validation.png)
+
 
 - [JSHint](https://jshint.com/) was used to validate JavaScript.
+![JS validation](/images/js-validation.png)
+
 
 ## User Stories Testing
 
