@@ -161,6 +161,9 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
     - Users have the choice of different characters to play with. 
     - When starting a new game, users are able to choose a new character to play with. 
 
+5. **Adjust game canvas for different screen sizes**
+    - Make a game canvas for each of the different screen sizes, including desktop, and tablet. 
+
 # Technologies Used
 
 ### Tools
