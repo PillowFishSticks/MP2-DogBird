@@ -133,7 +133,6 @@ function init() {
 
             }
 
-
             // collision
 
             if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width &&
@@ -156,8 +155,8 @@ function init() {
 
             if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width &&
                 dY <= rocketpos[i].y + randomNumber + 50 + bone.height) {
-                    bonesound.play();
-                    score += 1;
+                bonesound.play();
+                score += 1;
             }
 
             // score 
@@ -183,7 +182,6 @@ function init() {
         ctx.drawImage(dog, dX, dY);
 
         dY += gravity;
-
 
         ctx.fillSyle = "black";
         ctx.font = "20px Verdana";
