@@ -1,5 +1,4 @@
 // accordian open and close on touch
-
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -16,19 +15,16 @@ for (i = 0; i < acc.length; i++) {
 }
 
 // canvas variables
-
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
 // Load images
-
 var dog = new Image();
 var bg = new Image();
 var fg = new Image();
 var rocketNorth = new Image();
 var rocketSouth = new Image();
 var bone = new Image();
-
 
 dog.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/dogrocket.png";
 bg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/sbg.png";
@@ -37,9 +33,7 @@ rocketNorth.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/rocketN
 rocketSouth.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/rocketSouth.png";
 bone.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/bone.png";
 
-
 // static image onload
-
 window.onload = function () {
     ctx.drawImage(bg, 0, 0);
     ctx.drawImage(rocketNorth, 200, -100);
@@ -49,11 +43,9 @@ window.onload = function () {
 }
 
 // start game function
-
 function init() {
 
     // time variable
-
     var time = 1;
 
     var interval = setInterval(increment, 1000);
@@ -63,26 +55,21 @@ function init() {
     }
 
     // score
-
     var score = 0;
 
     // gap variables
-
     var gap = 160;
     var constant = rocketNorth.height + gap;
 
 
     // dog variables
-
     var dX = 10;
     var dY = 150;
 
     // gravity variable
-
     var gravity = 1;
 
     // audio file
-
     var gapscore = new Audio();
     var death = new Audio();
     var bonesound = new Audio();
@@ -100,7 +87,6 @@ function init() {
     }
 
     // rocket placement
-
     var rocketpos = [];
 
     rocketpos[0] = {
@@ -112,7 +98,6 @@ function init() {
 
 
     // draw images
-
     function draw() {
 
         ctx.drawImage(bg, 0, 0);
@@ -134,7 +119,6 @@ function init() {
             }
 
             // collision
-
             if (dX + dog.width >= rocketpos[i].x && dX <= rocketpos[i].x + rocketNorth.width &&
                 (dY <= rocketpos[i].y + rocketNorth.height || dY + dog.height >=
                     rocketpos[i].y + constant) || dY + dog.height >= cvs.height - fg.height) {
@@ -160,14 +144,12 @@ function init() {
             }
 
             // score 
-
             if (rocketpos[i].x == 6) {
                 score++;
                 gapscore.play();
             }
 
             // reduce gravity      
-
             if (time <= 59 && time >= 10) {
                 gravity = 1.5;
             } else if (time <= 89 && time >= 60) {

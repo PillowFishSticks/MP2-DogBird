@@ -24,10 +24,12 @@
         <div class="row logo">
             <h1>Dogbird<img src="images/dog.png" alt="picture of a dog in a rocket"></h1>
         </div>
+        <!-- Accordian -->
         <div class="row">
             <div class="col-lg-4">
                 <h2 class="headers">Game</h2>
                 <div class="spacing">
+                    <!-- About the game -->
                     <button class="accordion">About</button>
                     <div class="paneldrop">
                         <p class="background">
@@ -35,6 +37,7 @@
                             need to dodge pipes, catch treats and fly like your life depends on it. Best of luck!
                         </p>
                     </div>
+                    <!-- Game rules explained -->
                     <button class="accordion">Rules</button>
                     <div class="paneldrop">
                         <p class="background">
@@ -44,6 +47,7 @@
                             it gets!
                         </p>
                     </div>
+                    <!-- Game controls explained -->
                     <button class="accordion">Controls</button>
                     <div class="paneldrop">
                         <p class="background">
@@ -53,10 +57,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Game canvas -->
             <div class="col-lg-4 playarea">
                 <canvas id="canvas" width="288" height="512"></canvas>
                 <input type="button" value="Start" onclick="init()" id="btn" />
             </div>
+            <!-- Users highscores  -->
             <div class="col-lg-4 highscorearea">
                 <h2 class="headers">Highscore</h2>
                 <div class="spacing">
