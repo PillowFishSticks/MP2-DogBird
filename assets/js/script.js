@@ -40,7 +40,7 @@ window.onload = function () {
     ctx.drawImage(rocketSouth, 200, 300);
     ctx.drawImage(fg, 0, 400);
     ctx.drawImage(dog, 10, 150);
-}
+};
 
 // start game function
 function init() {
@@ -77,7 +77,7 @@ function init() {
 
     gapscore.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/gapscore.mp3";
     death.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/death.mp3";
-    bonesound.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/bonesound.mp3"
+    bonesound.src = "https://pillowfishsticks.github.io/MP2-DogBird/audio/bonesound.mp3";
 
     // onkey down
     document.addEventListener("click", moveUp);
