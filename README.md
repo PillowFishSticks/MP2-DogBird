@@ -120,17 +120,17 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 ![Dogbird](/images/dogbird.png)
 
 **Game**
-- The game section outlines some informatioon about Dogbird, including About, Rules, and Controls, in the form of an accordian. 
+- The game section outlines some information about Dogbird, including About, Rules, and Controls, in the form of an accordian. 
 - About includes more information on Dogbird. 
 - Rules includes information how to play the game and how to increase your score. 
 - Controls includes information on the controls needed to play the game. 
 
 **Dogbird**
-- This section includdes the actual game which is on a canvas. 
+- This section includes the actual game which is on a canvas. 
 - It includes a start button at the bottom of the canvas. 
 - The game includes sound effects when playing. 
 - A timer displays once the game starts. 
-- The game character falls faster at 10, 30, and 90 secoonds. Making the game more difficult the longer users play. 
+- The game character falls faster at 10, 30, and 90 seconds. Making the game more difficult the longer users play. 
 
 **Highscore**
 - This section includes a list of all the scores a user gets when playing. 

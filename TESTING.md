@@ -86,7 +86,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Safari.
 1. Game 
     - Clicked on each section of the accordian to ensure it collapsed. 
     - Checked that the accordian changed to bright purple when collapsed. 
-    - Checked that the accordian changedd back to bright pink when not collapsed. 
+    - Checked that the accordian changed back to bright pink when not collapsed. 
     - Ensure all text was spelt correctly and legiable. 
 
 2. Dogbird
@@ -104,7 +104,7 @@ All steps below were repeated to test mobile and tablet specific elements on iPh
    - Check that different page sections are stacked on top of one another. 
    - Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
    - Check that all buttons, and other elements are the correct proportions and easily clickable with a finger.
-   - No content squashed or squeezed or disproportionate in size.
+   - No content is squashed or squeezed or disproportionate in size.
    - Confirm that all clicks and swipes operate as expected on touch screen.
 
 ### Browser compatibilty
