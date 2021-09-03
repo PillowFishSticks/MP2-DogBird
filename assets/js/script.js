@@ -132,9 +132,9 @@ function init() {
                         var newText = document.createTextNode("Score to beat is " + score);
                         newScore.appendChild(newText);
                         document.getElementById("scorelist").appendChild(newScore);
-                    }
-                    location.return();
                 }
+                return;
+                }   
             }
 
             if (dX + dog.width >= rocketpos[i].x + 80 && dX <= rocketpos[i].x + 80 + bone.width &&
