@@ -29,14 +29,8 @@
         const fg = new Image();
         fg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/fg.png";
 
-        const gourmetImages = [
-            "https://example.com/images/gourmet-image.png",
-            "https://example.com/images/gourmet-image-2.png",
-            "https://example.com/images/gourmet-image-3.png"
-        ];
-
-        let currentGourmet = new Image();
-        resetGourmetImage();
+        const bone = new Image();
+        bone.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/bone.png";
 
         // Game variables
         let dogX = canvas.width / 2 - 50;
@@ -74,29 +68,23 @@
                 dogX += dogSpeed;
             }
 
-            // Move the falling object
+            // Move the bone
             boneY += boneSpeed;
 
-            // Check for catching
+            // Check for bone catching
             if (boneY + 30 >= dogY && boneX > dogX && boneX < dogX + 50) {
                 score++;
-                resetGourmetImage();
                 boneY = -50;
                 boneX = Math.random() * (canvas.width - 50);
             }
 
-            // Check for hitting the floor
+            // Check for bone hitting the floor
             if (boneY >= canvas.height - 100) {
                 gameRunning = false;
             }
 
             // Redraw the scene
             drawGame();
-        }
-
-        function resetGourmetImage() {
-            const randomIndex = Math.floor(Math.random() * gourmetImages.length);
-            currentGourmet.src = gourmetImages[randomIndex];
         }
 
         // Draw the game elements
@@ -110,8 +98,8 @@
             // Draw dog
             ctx.drawImage(dogImage, dogX, dogY, 50, 50);
 
-            // Draw falling object
-            ctx.drawImage(currentGourmet, boneX, boneY, 30, 30);
+            // Draw bone
+            ctx.drawImage(bone, boneX, boneY, 30, 30);
 
             // Display score
             ctx.fillStyle = "white";
