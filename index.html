@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="DogBird" content="Dogbird">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:,">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-    </script>
-    <title>DOGBIRD</title>
+    <title>Catch the Falling Object</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; margin: 0 auto; }
+    </style>
 </head>
-
 <body>
-    <div class="container-fluid">
-        <div class="row logo">
-            <h1>Dogbird<img src="images/dog.png" alt="picture of a dog in a rocket"></h1>
-        </div>
-        <!-- Accordian -->
-        <div class="row">
-            <div class="col-lg-4">
-                <h2 class="headers">Game</h2>
-                <div class="spacing">
-                    <!-- About the game -->
-                    <button class="accordion">About</button>
-                    <div class="paneldrop">
-                        <p class="background">
-                            Is it a dog? Is it a bird? No, its Dogbird! A game of skill, luck, and chance. You
-                            need to dodge pipes, catch treats and fly like your life depends on it. Best of luck!
-                        </p>
-                    </div>
-                    <!-- Game rules explained -->
-                    <button class="accordion">Rules</button>
-                    <div class="paneldrop">
-                        <p class="background">
-                            The aim of the game is to keep flying for as long as possible. You need to dodge the pipes
-                            while maneuvering between them. While dodging pipes, you need to try and catch the bones,
-                            which when caught increase your score. Be careful though, the longer you player, the harder
-                            it gets!
-                        </p>
-                    </div>
-                    <!-- Game controls explained -->
-                    <button class="accordion">Controls</button>
-                    <div class="paneldrop">
-                        <p class="background">
-                            Click the start button to begin the game. Use your mouse or touch pad to move up and dodge
-                            obstacles. Gravity will bring you back down to earth.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Game canvas -->
-            <div class="col-lg-4 playarea">
-                <canvas id="canvas" width="288" height="512"></canvas>
-                <input type="button" value="Start" onclick="init()" id="btn" />
-            </div>
-            <!-- Users highscores  -->
-            <div class="col-lg-4 highscorearea">
-                <h2 class="headers">Highscore</h2>
-                <div class="spacing">
-                    <div id="scorelist"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="assets/js/script.js"></script>
-</body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
 
+        // Set canvas size
+        canvas.width = 800;
+        canvas.height = 600;
+
+        // Load images
+        const dogImage = new Image();
+        dogImage.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/dogrocket.png";
+
+        const bg = new Image();
+        bg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/sbg.png";
+
+        const fg = new Image();
+        fg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/fg.png";
+
+        const bone = new Image();
+        bone.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/bone.png";
+
+        // Game variables
+        let dogX = canvas.width / 2 - 50;
+        let dogY = canvas.height - 150;
+        let dogSpeed = 7;
+        let boneX = Math.random() * (canvas.width - 50);
+        let boneY = -50;
+        let boneSpeed = 3;
+        let gameRunning = true;
+        let score = 0;
+
+        // Handle user input (left and right arrows)
+        let leftPressed = false;
+        let rightPressed = false;
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") leftPressed = true;
+            if (e.key === "ArrowRight") rightPressed = true;
+        });
+
+        document.addEventListener("keyup", (e) => {
+            if (e.key === "ArrowLeft") leftPressed = false;
+            if (e.key === "ArrowRight") rightPressed = false;
+        });
+
+        // Update game objects
+        function updateGame() {
+            if (!gameRunning) return;
+
+            // Move the dog
+            if (leftPressed && dogX > 0) {
+                dogX -= dogSpeed;
+            }
+            if (rightPressed && dogX < canvas.width - 50) {
+                dogX += dogSpeed;
+            }
+
+            // Move the bone
+            boneY += boneSpeed;
+
+            // Check for bone catching
+            if (boneY + 30 >= dogY && boneX > dogX && boneX < dogX + 50) {
+                score++;
+                boneY = -50;
+                boneX = Math.random() * (canvas.width - 50);
+            }
+
+            // Check for bone hitting the floor
+            if (boneY >= canvas.height - 100) {
+                gameRunning = false;
+            }
+
+            // Redraw the scene
+            drawGame();
+        }
+
+        // Draw the game elements
+        function drawGame() {
+            // Draw background
+            ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+
+            // Draw floor
+            ctx.drawImage(fg, 0, canvas.height - 100, canvas.width, 100);
+
+            // Draw dog
+            ctx.drawImage(dogImage, dogX, dogY, 50, 50);
+
+            // Draw bone
+            ctx.drawImage(bone, boneX, boneY, 30, 30);
+
+            // Display score
+            ctx.fillStyle = "white";
+            ctx.font = "20px Arial";
+            ctx.fillText("Score: " + score, 20, 30);
+
+            // Game Over message
+            if (!gameRunning) {
+                ctx.fillStyle = "red";
+                ctx.font = "40px Arial";
+                ctx.fillText("Game Over!", canvas.width / 2 - 120, canvas.height / 2);
+                ctx.font = "20px Arial";
+                ctx.fillText("Final Score: " + score, canvas.width / 2 - 60, canvas.height / 2 + 40);
+            }
+        }
+
+        // Game loop
+        function gameLoop() {
+            updateGame();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Start the game
+        gameLoop();
+    </script>
+</body>
 </html>
