@@ -38,9 +38,13 @@
         let currentBone = new Image();
 
         // Game variables
-        let dogX = canvas.width / 2 - 50;
-        let dogY = canvas.height - 150;
+        let dogX = canvas.width / 2 - 75;
+        let dogY = canvas.height - 200;
         let dogSpeed = 7;
+        let dogWidth = 100;
+        let dogHeight = 100;
+        let dogDirection = 1; // 1 = right, -1 = left
+
         let boneX = Math.random() * (canvas.width - 50);
         let boneY = -50;
         let boneSpeed = 3;
@@ -52,8 +56,14 @@
         let rightPressed = false;
 
         document.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowLeft") leftPressed = true;
-            if (e.key === "ArrowRight") rightPressed = true;
+            if (e.key === "ArrowLeft") {
+                leftPressed = true;
+                dogDirection = -1;
+            }
+            if (e.key === "ArrowRight") {
+                rightPressed = true;
+                dogDirection = 1;
+            }
         });
 
         document.addEventListener("keyup", (e) => {
@@ -73,7 +83,7 @@
             if (leftPressed && dogX > 0) {
                 dogX -= dogSpeed;
             }
-            if (rightPressed && dogX < canvas.width - 50) {
+            if (rightPressed && dogX < canvas.width - dogWidth) {
                 dogX += dogSpeed;
             }
 
@@ -81,8 +91,6 @@
             boneY += boneSpeed;
 
             // Check for bone catching
-            const dogWidth = 50;
-            const dogHeight = 50;
             const boneWidth = 30;
             const boneHeight = 30;
 
@@ -115,8 +123,15 @@
             // Draw floor
             ctx.drawImage(fg, 0, canvas.height - 100, canvas.width, 100);
 
-            // Draw dog
-            ctx.drawImage(dogImage, dogX, dogY, 50, 50);
+            // Flip dog when changing direction
+            ctx.save();
+            if (dogDirection === -1) {
+                ctx.scale(-1, 1);
+                ctx.drawImage(dogImage, -dogX - dogWidth, dogY, dogWidth, dogHeight);
+            } else {
+                ctx.drawImage(dogImage, dogX, dogY, dogWidth, dogHeight);
+            }
+            ctx.restore();
 
             // Draw bone
             ctx.drawImage(currentBone, boneX, boneY, 30, 30);
