@@ -29,8 +29,17 @@
         const fg = new Image();
         fg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/fg.png";
 
-        const bone = new Image();
-        bone.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/gourmet-image.png";
+        const boneImages = [
+            "https://pillowfishsticks.github.io/MP2-DogBird/images/gourmet-image.png",
+            "https://pillowfishsticks.github.io/MP2-DogBird/images/gourmet-image-2.png",
+            "https://pillowfishsticks.github.io/MP2-DogBird/images/gourmet-image-3.png"
+        ];
+
+        let currentBoneImage = new Image();
+        function setRandomBoneImage() {
+            const randomIndex = Math.floor(Math.random() * boneImages.length);
+            currentBoneImage.src = boneImages[randomIndex];
+        }
 
         // Game variables
         let dogX = canvas.width / 2 - 50;
@@ -76,6 +85,7 @@
                 score++;
                 boneY = -50;
                 boneX = Math.random() * (canvas.width - 50);
+                setRandomBoneImage();
             }
 
             // Check for bone hitting the floor
@@ -99,7 +109,7 @@
             ctx.drawImage(dogImage, dogX, dogY, 50, 50);
 
             // Draw bone
-            ctx.drawImage(bone, boneX, boneY, 30, 30);
+            ctx.drawImage(currentBoneImage, boneX, boneY, 30, 30);
 
             // Display score
             ctx.fillStyle = "white";
@@ -123,6 +133,7 @@
         }
 
         // Start the game
+        setRandomBoneImage();
         gameLoop();
     </script>
 </body>
