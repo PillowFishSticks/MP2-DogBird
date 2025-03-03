@@ -16,8 +16,8 @@
         const ctx = canvas.getContext("2d");
 
         // Set canvas size
-        canvas.width = 800;
-        canvas.height = 600;
+        canvas.width = 1000;
+        canvas.height = 800;
 
         // Load images
         const dogImage = new Image();
@@ -38,32 +38,24 @@
         let currentBone = new Image();
 
         // Game variables
-        let dogX = canvas.width / 2 - 75;
-        let dogY = canvas.height - 200;
+        let dogX = canvas.width / 2 - 100;
+        let dogY = canvas.height - 250;
         let dogSpeed = 7;
-        let dogWidth = 100;
-        let dogHeight = 100;
-        let dogDirection = 1; // 1 = right, -1 = left
-
         let boneX = Math.random() * (canvas.width - 50);
         let boneY = -50;
         let boneSpeed = 3;
         let gameRunning = true;
         let score = 0;
 
+        let dogDirection = "right";
+
         // Handle user input (left and right arrows)
         let leftPressed = false;
         let rightPressed = false;
 
         document.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowLeft") {
-                leftPressed = true;
-                dogDirection = -1;
-            }
-            if (e.key === "ArrowRight") {
-                rightPressed = true;
-                dogDirection = 1;
-            }
+            if (e.key === "ArrowLeft") leftPressed = true;
+            if (e.key === "ArrowRight") rightPressed = true;
         });
 
         document.addEventListener("keyup", (e) => {
@@ -82,17 +74,21 @@
             // Move the dog
             if (leftPressed && dogX > 0) {
                 dogX -= dogSpeed;
+                dogDirection = "left";
             }
-            if (rightPressed && dogX < canvas.width - dogWidth) {
+            if (rightPressed && dogX < canvas.width - 150) {
                 dogX += dogSpeed;
+                dogDirection = "right";
             }
 
             // Move the bone
             boneY += boneSpeed;
 
             // Check for bone catching
-            const boneWidth = 30;
-            const boneHeight = 30;
+            const dogWidth = 150;
+            const dogHeight = 150;
+            const boneWidth = 50;
+            const boneHeight = 50;
 
             if (
                 boneX < dogX + dogWidth &&
@@ -123,9 +119,12 @@
             // Draw floor
             ctx.drawImage(fg, 0, canvas.height - 100, canvas.width, 100);
 
-            // Flip dog when changing direction
+            // Draw dog with direction flip
+            const dogWidth = 300;
+            const dogHeight = 300;
+
             ctx.save();
-            if (dogDirection === -1) {
+            if (dogDirection === "left") {
                 ctx.scale(-1, 1);
                 ctx.drawImage(dogImage, -dogX - dogWidth, dogY, dogWidth, dogHeight);
             } else {
@@ -134,7 +133,7 @@
             ctx.restore();
 
             // Draw bone
-            ctx.drawImage(currentBone, boneX, boneY, 30, 30);
+            ctx.drawImage(currentBone, boneX, boneY, 50, 50);
 
             // Display score
             ctx.fillStyle = "white";
