@@ -165,7 +165,7 @@ function init() {
 
         dY += gravity;
 
-        ctx.fillSyle = "black";
+        ctx.fillStyle = "black";
         ctx.font = "20px Verdana";
         ctx.fillText("Score : " + score, 10, 50);
         ctx.fillText("Time : " + time, 180, 50);
