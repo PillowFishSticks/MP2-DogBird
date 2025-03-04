@@ -21,58 +21,177 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row logo">
-            <h1>Dogbird<img src="images/dog.png" alt="picture of a dog in a rocket"></h1>
-        </div>
-        <!-- Accordian -->
-        <div class="row">
-            <div class="col-lg-4">
-                <h2 class="headers">Game</h2>
-                <div class="spacing">
-                    <!-- About the game -->
-                    <button class="accordion">About</button>
-                    <div class="paneldrop">
-                        <p class="background">
-                            Is it a dog? Is it a bird? No, its Dogbird! A game of skill, luck, and chance. You
-                            need to dodge pipes, catch treats and fly like your life depends on it. Best of luck!
-                        </p>
-                    </div>
-                    <!-- Game rules explained -->
-                    <button class="accordion">Rules</button>
-                    <div class="paneldrop">
-                        <p class="background">
-                            The aim of the game is to keep flying for as long as possible. You need to dodge the pipes
-                            while maneuvering between them. While dodging pipes, you need to try and catch the bones,
-                            which when caught increase your score. Be careful though, the longer you player, the harder
-                            it gets!
-                        </p>
-                    </div>
-                    <!-- Game controls explained -->
-                    <button class="accordion">Controls</button>
-                    <div class="paneldrop">
-                        <p class="background">
-                            Click the start button to begin the game. Use your mouse or touch pad to move up and dodge
-                            obstacles. Gravity will bring you back down to earth.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Game canvas -->
-            <div class="col-lg-4 playarea">
-                <canvas id="canvas" width="288" height="512"></canvas>
-                <input type="button" value="Start" onclick="init()" id="btn" />
-            </div>
-            <!-- Users highscores  -->
-            <div class="col-lg-4 highscorearea">
-                <h2 class="headers">Highscore</h2>
-                <div class="spacing">
-                    <div id="scorelist"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="assets/js/script.js"></script>
+    <canvas id="gameCanvas"></canvas>
+<script>
+    // Set up the canvas
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Resize canvas to fit the window
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Assets
+    const dog = new Image();
+    const bg = new Image();
+    const fg = new Image();
+    const rocketNorth = new Image();
+    const rocketSouth = new Image();
+    const bone = new Image();
+
+    // Load images
+    dog.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/dogrocket.png";
+    bg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/sbg.png";
+    fg.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/fg.png";
+    rocketNorth.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/rocketNorth.png";
+    rocketSouth.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/rocketSouth.png";
+    bone.src = "https://pillowfishsticks.github.io/MP2-DogBird/images/bone.png";
+
+    // Game variables
+    let dogX = 50;
+    let dogY = canvas.height / 2;
+    let gravity = 0.1;
+    let lift = -3;
+    let velocity = 0;
+
+    let gap = 300;  // Gap between the top and bottom pipes (between each set)
+    let pipeWidth = 100;
+    let pipeSpeed = 3;
+    let pipeSpacing = 500;  // Increased space between sets of pipes
+    let pipes = [];
+    let bones = [];  // Array to store bones
+
+    // Game state flag
+    let gameRunning = true;
+
+    // Event listener for jumping
+    document.addEventListener("keyup", () => {
+        if (!gameRunning) return; // Don't jump if the game is over
+        velocity = lift;
+    });
+
+    // Draw everything
+    function draw() {
+        if (!gameRunning) return;  // Stop the game loop if the game is over
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Background
+        ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+
+        // Dog (flappy bird)
+        velocity += gravity;
+        dogY += velocity;
+
+        // Draw dog
+        ctx.drawImage(dog, dogX, dogY, 50, 50);
+
+        // Draw pipes
+        if (pipes.length === 0 || pipes[pipes.length - 1].x < canvas.width - pipeSpacing) {
+            let pipeHeight = Math.floor(Math.random() * (canvas.height - gap));
+            pipes.push({
+                x: canvas.width,
+                y: pipeHeight,
+            });
+
+            // Randomly decide if a bone will appear between the pipes
+            if (Math.random() < 0.5) {  // 50% chance to spawn a bone
+                let boneY = Math.floor(Math.random() * gap) + pipes[pipes.length - 1].y;  // Random position in the gap
+                bones.push({
+                    x: canvas.width,
+                    y: boneY,
+                    collected: false
+                });
+            }
+        }
+
+        // Update pipe positions and draw them
+        pipes.forEach((pipe, index) => {
+            pipe.x -= pipeSpeed;
+
+            // Draw pipes (north and south)
+            ctx.drawImage(rocketNorth, pipe.x, 0, pipeWidth, pipe.y);
+            ctx.drawImage(rocketSouth, pipe.x, pipe.y + gap, pipeWidth, canvas.height);
+
+            // Remove pipes if they go off the screen
+            if (pipe.x + pipeWidth < 0) {
+                pipes.splice(index, 1);
+            }
+
+            // Check for collisions with the dog
+            if (
+                dogX + 50 > pipe.x &&
+                dogX < pipe.x + pipeWidth &&
+                (dogY < pipe.y || dogY + 50 > pipe.y + gap)
+            ) {
+                gameOver();
+            }
+        });
+
+        // Update bone positions and draw them
+        bones.forEach((boneObj, index) => {
+            boneObj.x -= pipeSpeed;
+
+            // Draw bone
+            if (!boneObj.collected) {
+                ctx.drawImage(bone, boneObj.x, boneObj.y, 30, 30);  // Draw bone at specified position
+            }
+
+            // Remove bones if they go off the screen
+            if (boneObj.x + 30 < 0) {
+                bones.splice(index, 1);
+            }
+
+            // Check for collision with the dog
+            if (
+                dogX + 50 > boneObj.x &&
+                dogX < boneObj.x + 30 &&
+                dogY + 50 > boneObj.y &&
+                dogY < boneObj.y + 30
+            ) {
+                boneObj.collected = true;  // Mark bone as collected
+                bones.splice(index, 1);  // Remove bone from array
+            }
+        });
+
+        // Draw floor
+        ctx.drawImage(fg, 0, canvas.height - fg.height, canvas.width, fg.height);
+
+        // Check if the dog hit the ground or ceiling
+        if (dogY + 50 > canvas.height - fg.height || dogY < 0) {
+            gameOver();
+        }
+
+        // Request next animation frame
+        requestAnimationFrame(draw);
+    }
+
+    // Handle game over
+    function gameOver() {
+        gameRunning = false;  // Stop the game loop
+        dogY = canvas.height / 2;  // Reset dog's Y position
+        velocity = 0;  // Reset velocity to 0 (important!)
+        pipes = [];  // Clear pipes
+        bones = [];  // Clear bones
+    }
+
+    // Start the game
+    function startGame() {
+        gameRunning = true;  // Start the game
+        draw();  // Begin drawing
+    }
+
+    // Restart game on any key press after game over
+    document.addEventListener("keydown", () => {
+        if (!gameRunning) {
+            startGame();
+        }
+    });
+
+    // Start the game
+    startGame();
+
+</script>
 </body>
 
 </html>
